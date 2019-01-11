@@ -28,7 +28,7 @@
     </target>
     
 	<target name="client" depends="build"  description="Runs Client program">
-		<java classname="controller.SMSController" classpathref="full.classpath" fork="true">
+		<java classname="controller.Controller" classpathref="full.classpath" fork="true">
 			<jvmarg value="-Djava.security.policy=${policy.file}"/>			
         	<arg value="${rmiregistry.IP}"/> 
 	 		<arg value="${rmiregistry.port}"/> 

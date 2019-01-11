@@ -1,0 +1,137 @@
+package GUI;
+import java.awt.EventQueue;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
+import controller.Controller;
+
+import javax.swing.JComboBox;
+import java.awt.Choice;
+import java.awt.Label;
+import javax.swing.JPopupMenu;
+import java.awt.Component;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+public class Booking {
+
+	private JFrame frame;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	Controller controller;
+	/**
+	 * Create the application.
+	 */
+	public Booking(Controller controller) {
+		initialize();
+		frame.setVisible(true);
+		this.controller = controller;
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblEasybooking = new JLabel("EasyBooking");
+		lblEasybooking.setFont(new Font("Serif", Font.PLAIN, 20));
+		lblEasybooking.setBounds(155, 0, 183, 27);
+		frame.getContentPane().add(lblEasybooking);
+		
+		JList list = new JList();
+		list.setBounds(10, 121, 387, 117);
+		frame.getContentPane().add(list);
+		
+		JLabel lblNewLabel = new JLabel("Results:");
+		lblNewLabel.setBounds(10, 106, 68, 14);
+		frame.getContentPane().add(lblNewLabel);
+		
+		JButton btnBook = new JButton("Book");
+		btnBook.setBounds(170, 238, 68, 23);
+		frame.getContentPane().add(btnBook);
+		
+		textField = new JTextField();
+		textField.setBounds(98, 65, 77, 20);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(10, 65, 77, 20);
+		frame.getContentPane().add(textField_1);
+		textField_1.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("From:");
+		lblNewLabel_1.setBounds(20, 50, 46, 14);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblTo = new JLabel("To:");
+		lblTo.setBounds(99, 50, 46, 14);
+		frame.getContentPane().add(lblTo);
+		
+		Choice day = new Choice();
+		day.setBounds(181, 65, 46, 20);
+		for(int n = 1; n < 32; n++) {
+			day.add(""+n);
+		}
+		frame.getContentPane().add(day);
+		
+		Choice month = new Choice();
+		month.setBounds(233, 65, 46, 20);
+		for(int n = 1; n < 13; n++) {
+			month.add(""+n);
+		}
+		frame.getContentPane().add(month);
+		
+		Choice year = new Choice();
+		year.setBounds(285, 65, 55, 20);
+		for(int n = 2019; n < 2023; n++) {
+			year.add(""+n);
+		}
+		frame.getContentPane().add(year);
+		
+		Label label = new Label("Date");
+		label.setBounds(217, 42, 62, 22);
+		frame.getContentPane().add(label);
+		
+		textField_2 = new JTextField();
+		textField_2.setBounds(361, 65, 46, 20);
+		frame.getContentPane().add(textField_2);
+		textField_2.setColumns(10);
+		
+		JLabel lblNewLabel_2 = new JLabel("Number of");
+		lblNewLabel_2.setBounds(360, 31, 64, 14);
+		frame.getContentPane().add(lblNewLabel_2);
+		
+		JLabel lblPassengers = new JLabel("Passengers");
+		lblPassengers.setBounds(361, 50, 77, 14);
+		frame.getContentPane().add(lblPassengers);
+		
+	}
+	private static void addPopup(Component component, final JPopupMenu popup) {
+		component.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) {
+				if (e.isPopupTrigger()) {
+					showMenu(e);
+				}
+			}
+			public void mouseReleased(MouseEvent e) {
+				if (e.isPopupTrigger()) {
+					showMenu(e);
+				}
+			}
+			private void showMenu(MouseEvent e) {
+				popup.show(e.getComponent(), e.getX(), e.getY());
+			}
+		});
+	}
+}

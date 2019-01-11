@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" output="bin" path="src"/>
 	<classpathentry kind="var" path="JRE_LIB" rootpath="JRE_SRCROOT" sourcepath="JRE_SRC"/>
-	<classpathentry kind="lib" path="C:/Users/Egoitz/Desktop/EasyBooking/EasyBooking_Client/lib/EasyBooking.jar"/>
-	<classpathentry kind="con" path="C:/Users/Egoitz/Desktop/EasyBooking/EasyBooking_Client/bin"/>
+	<classpathentry kind="lib" path="C:/Users/Egoitz/eclipse-workspace/EasyBooking_Client/lib/EasyBooking.jar"/>
+	<classpathentry kind="con" path="C:/Users/Egoitz/eclipse-workspace/EasyBooking_Client/bin"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
