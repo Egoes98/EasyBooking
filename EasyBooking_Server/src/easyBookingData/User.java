@@ -7,15 +7,31 @@ public class User {
 
 	private String email;
 	private String authorization_sys;
-	private String payment_method;
 	private Reservation reservation;
+	
+	private String payment_method;
+	//Visa
+	private String name;
+	private String cardNumber;
+	private String cvv;
+	//Paypal
+	private String username;
+	private String password;
 	
 	private List<Reservation> res = new ArrayList<>();
 
-	public User(String email, String authorization_sys, String payment_method, Reservation reservation, List<Reservation> res) {
+	public User(String email, String authorization_sys, String[] payment) {
 		this.email = email;
 		this.authorization_sys = authorization_sys;
-		this.payment_method = payment_method;
+		this.payment_method = payment[0];
+		if(payment_method.equals("Visa")) {
+			name = payment[1];
+			cardNumber = payment[2];
+			cvv = payment[3];
+		}else {
+			username = payment[1];
+			password = payment[2];
+		}
 		
 	}
 	

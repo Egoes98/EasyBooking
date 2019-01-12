@@ -41,18 +41,18 @@ public class Controller {
     	IEasyBookingRemoteFacade a = rsl.getService();
     	a.bookFlight();
     }
-    public void loginUser() throws RemoteException{
+    public boolean loginUser(String method, String email, String password) throws RemoteException{
     	IEasyBookingRemoteFacade a = rsl.getService();
-    	a.loginUser();
+    	return a.loginUser(method,email,password);
     }
     public void makePayment() throws RemoteException{
     	IEasyBookingRemoteFacade a = rsl.getService();
     	a.makePayment();
     }
     
-    public void registerUser() throws RemoteException{
+    public void registerUser(String method, String email, String password, String[] payment) throws RemoteException{
     	IEasyBookingRemoteFacade a = rsl.getService();
-    	a.registerUser();
+    	a.registerUser(method,email,password,payment);
     }
     
     public void exit(){

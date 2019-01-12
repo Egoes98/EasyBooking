@@ -28,15 +28,15 @@ public class FacebookGateway implements IAuthorizationService{
 	}
 	
 	@Override
-	public void registerUser() throws RemoteException{
+	public void registerUser(String method,String email,String password) throws RemoteException{
 		// TODO Auto-generated method stub
-		
+		service.registerUser(email,password);
 	}
 
 	@Override
-	public void loginUser() throws RemoteException {
+	public boolean loginUser(String method,String email,String password) throws RemoteException {
 		// TODO Auto-generated method stub
-		service.loginUser();
+		return service.loginUser(email,password);
 	}
 
 	

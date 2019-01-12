@@ -57,19 +57,24 @@ public class Login {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				//Conectar con Facebook
+				boolean correct = false;
 				try {
 					System.out.println(textField.getText());
 					//Parametros de conecxion
 					String email = textField.getText();
 					String password = "" + textField_1.getText();
-					controller.loginUser();
+					correct = controller.loginUser("Facebook",email,password);
 				} catch (RemoteException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				new Booking(controller);
-				new Booked(controller);
-				frame.dispose();
+				if(correct) {
+					new Booking(controller);
+					new Booked(controller);
+					frame.dispose();
+				}else {
+					System.out.println("Incorrect Account!!");
+				}
 			}
 		});
 		btnNewButton.setBounds(109, 157, 89, 23);
@@ -104,19 +109,24 @@ public class Login {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				//Conectar con google+
+				boolean correct = false;
 				try {
 					System.out.println(textField.getText());
 					//Parametros de conecxion
 					String email = textField.getText();
 					String password = "" + textField_1.getText();
-					controller.loginUser();
+					correct = controller.loginUser("Google+",email,password);
 				} catch (RemoteException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				new Booking(controller);
-				new Booked(controller);
-				frame.dispose();
+				if(correct) {
+					new Booking(controller);
+					new Booked(controller);
+					frame.dispose();
+				}else {
+					System.out.println("Incorrect Account!!");
+				}
 			}
 		});
 		btnNewButton_2.setBounds(219, 157, 89, 23);

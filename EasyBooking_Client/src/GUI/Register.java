@@ -224,22 +224,31 @@ public class Register {
 					//Registrar usuario
 					//Datos de Registro
 					String email = textField.getText();
-					String password = textField_1.getText();
+					String password = password_account.getText();
 					String lMethod;
 					if(GoogleRadioButton.isSelected()) {
 						lMethod="Google";
 					}else {
 						lMethod="Facebook";
 					}
+					String[] payment = new String[4];
+					
 					if(rdbtnPaypal.isSelected()) {
 						String username=textField_username.getText();
 						String pPassword=textField_password.getText();
+						payment[0] = "Paypal";
+						payment[1] = username;
+						payment[2] = password;
 					}else {
 						String name=textField_name.getText();
 						String cardNumber=textField_cardNumber.getText();
 						String cvv=textField_CVV.getText();
+						payment[0] = "Visa";
+						payment[1] = name;
+						payment[2] = cardNumber;
+						payment[3] = cvv;
 					}
-					controller.registerUser();
+					controller.registerUser(lMethod,email,password,payment);
 				} catch (RemoteException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
