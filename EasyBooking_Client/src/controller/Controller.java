@@ -3,7 +3,7 @@ package controller;
 import java.rmi.RemoteException;
 
 
-import es.deusto.ingenieria.sd.sms.server.remote.IEasyBookingRemoteFacade;
+import remote.IEasyBookingRemoteFacade;
 import serviceLocator.RMIServiceLocator;
 import GUI.*;
 
@@ -32,37 +32,6 @@ public class Controller {
 		
 	}
 	
-	
-	
-    public void newTVProgram(String acronym, String description){
-    	try {
-
-    		// Add your code HERE - Related to getting the service and requesting creation of TVProgram	
-    		IEasyBookingRemoteFacade a = rsl.getService();
-    		a.newTVProgram(acronym, description);
-    	} catch (Exception e){
-    		System.err.println("$ Error sending new TV program: " + e.getMessage());
-    	}
-    }
-    
-    public void sendMessage(String phone, String text){
-    	try{
-    		
-    		// Add your code HERE - Related to getting the service and sending a message	
-    		
-    		System.out.println(phone.substring(0,3));
-    		if(phone.substring(0,3).equals("609")  || phone.substring(0,3).equals("629")) {
-    			rsl.setService("127.0.0.1", "1099", "Movistar");
-    			
-    		}else if(phone.substring(0,3).equals("699")) {
-    			rsl.setService("127.0.0.1", "1099", "Vodafone");
-    		}
-    		IEasyBookingRemoteFacade a = rsl.getService();
-    		a.receiveMessage(phone, text);
-    	} catch(Exception e){
-    		System.out.println("$ Error sending a message: " + e.getMessage());
-    	}
-    }
   
     public void searchForFlight() throws RemoteException{
     	IEasyBookingRemoteFacade a = rsl.getService();
