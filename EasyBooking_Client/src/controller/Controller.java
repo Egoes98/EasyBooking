@@ -20,11 +20,15 @@ public class Controller {
 		new Login(this);
 		
 		// Para comprobar que la conexion se realizaba sin problemas
-		searchForFlight();
-		bookFlight();
-		loginUser();
-		registerUser();
-		makePayment();
+		/* 
+		 * searchForFlight();
+		 * bookFlight();
+		 * loginUser();
+		 * registerUser();
+		 * makePayment();
+		 * 
+		 */
+		
 		
 	}
 	

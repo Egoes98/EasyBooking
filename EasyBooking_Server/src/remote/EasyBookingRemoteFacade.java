@@ -1,4 +1,4 @@
-package es.deusto.ingenieria.sd.sms.server.remote;
+package remote;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;

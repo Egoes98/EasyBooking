@@ -1,9 +1,9 @@
-package es.deusto.ingenieria.sd.sms.server;
+package server;
 
 import java.rmi.Naming;
 
-import es.deusto.ingenieria.sd.sms.server.remote.EasyBookingRemoteFacade;
-import es.deusto.ingenieria.sd.sms.server.remote.IEasyBookingRemoteFacade;
+import remote.EasyBookingRemoteFacade;
+import remote.IEasyBookingRemoteFacade;
 
 
 
