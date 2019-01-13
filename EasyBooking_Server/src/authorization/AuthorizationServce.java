@@ -2,6 +2,8 @@ package authorization;
 
 import java.rmi.RemoteException;
 
+import remote.IAuthorization;
+
 public class AuthorizationServce implements IAuthorizationService{
 
 	FacebookGateway facebook;
@@ -12,6 +14,8 @@ public class AuthorizationServce implements IAuthorizationService{
 		this.facebook = facebook;
 		this.google = google;
 	}
+	
+	
 	
 	@Override
 	public void registerUser(String method, String email, String password) throws RemoteException {
@@ -32,7 +36,6 @@ public class AuthorizationServce implements IAuthorizationService{
 			return facebook.loginUser(method, email, password);
 		}
 	}
-
 
 
 }

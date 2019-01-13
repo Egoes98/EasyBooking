@@ -4,20 +4,19 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.HashMap;
 
-public class Facebook extends UnicastRemoteObject implements IAuthorization{
+public class Google extends UnicastRemoteObject implements IAuthorization{
 
-	
 	private static final long serialVersionUID = 1L;
 	private String serverName;
 	private HashMap<String, String> account = new HashMap<String, String>();
 
-	public Facebook(String serverName) throws RemoteException {
+	public Google(String serverName) throws RemoteException {
+		
 		this.serverName = serverName;
 		account.put("egoitz.a.c@opendeusto.es", "123");
 		account.put("test@test.es", "test");
 	}
 	
-	@Override
 	public boolean loginUser(String email,String password) throws RemoteException {
 		// TODO Auto-generated method stub
 		System.out.println(email + " " + password);
@@ -32,11 +31,10 @@ public class Facebook extends UnicastRemoteObject implements IAuthorization{
 		}
 	}
 
-	@Override
 	public void registerUser(String email,String password) throws RemoteException {
 		// TODO Auto-generated method stub
 		System.out.println(email + " " + password);
 		account.put(email, password);
 	}
-
+	
 }

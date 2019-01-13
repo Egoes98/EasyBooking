@@ -2,12 +2,12 @@ package authorization;
 
 import java.rmi.RemoteException;
 
-import remote.IFacebook;
+import remote.IAuthorization;
 
 
 public class FacebookGateway implements IAuthorizationService{
 
-	private IFacebook service;
+	private IAuthorization service;
 	
 	public FacebookGateway() {
 		
@@ -16,14 +16,14 @@ public class FacebookGateway implements IAuthorizationService{
 	public void setService(String ip, String port, String FacebookName) {
 		String name = "//" + ip + ":" + port + "/" + FacebookName;
 		try {
-			service = (IFacebook) java.rmi.Naming.lookup(name);
+			service = (IAuthorization) java.rmi.Naming.lookup(name);
 		}catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
 	}
 	
-	public IFacebook getService() {
+	public IAuthorization getService() {
 		return service;
 	}
 	

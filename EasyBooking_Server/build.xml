@@ -10,7 +10,7 @@
 	<property name="server.port" value="1099"/> 
 	<property name="server.IP" value="127.0.0.1"/> 
 	<property name="server.Name1" value="Server"/>
-	<property name="server.Name2" value="Facebook"/>
+	<property name="server.Name2" value="Authorization"/>
 	<property name="policy.file" location="security/java.policy"/>	
 
 	<target name="help">
@@ -18,11 +18,11 @@
 	</target>
 	
 	<path id="full.classpath">
-		        <fileset dir="${lib.dir}">
-		            <include name="**/*.jar"/>
-		        </fileset>
-		        <pathelement location="${build.dir}"/>        
-		</path>
+	        <fileset dir="${lib.dir}">
+		        <include name="**/*.jar"/>
+		    </fileset>
+			<pathelement location="${build.dir}"/>        
+	</path>
 		
 		<target name="build" description="Builds the project">
 				<delete dir="${build.dir}"/>

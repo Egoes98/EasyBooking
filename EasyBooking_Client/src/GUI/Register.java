@@ -227,7 +227,7 @@ public class Register {
 					String password = password_account.getText();
 					String lMethod;
 					if(GoogleRadioButton.isSelected()) {
-						lMethod="Google";
+						lMethod="Google+";
 					}else {
 						lMethod="Facebook";
 					}

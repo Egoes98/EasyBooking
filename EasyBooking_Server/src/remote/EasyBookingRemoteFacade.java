@@ -15,18 +15,27 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	private static final long serialVersionUID = 1L;
 	private String ip;
 	private String port;
-	private String FacebookName;
+	private String AuthorizationName;
 	private String serverName;
 	private FacebookGateway Facebookservice = new FacebookGateway();
 	private GoogleGateway GoogleService = new GoogleGateway();
 	AuthorizationServce aS;
 	HashMap<String, User> account = new HashMap<String, User>();
 
-	public EasyBookingRemoteFacade(String ip, String port, String serverName, String FacebookName) throws RemoteException {
+	public EasyBookingRemoteFacade(String ip, String port, String serverName, String AuthorizationName) throws RemoteException {
 		super();
 		this.serverName = serverName;
+		
+		//TODO -> solo hacer un setService, asi que esto se tendria que pasar al authorizationService ya que solo hay un servidor de Authorization
+		
 		Facebookservice.setService(ip, port, "Facebook");
+		GoogleService.setService(ip, port, "Google");
+	
+		
 		aS = new AuthorizationServce(Facebookservice, GoogleService);
+		
+		//Facebook Test Accounts
+		
 		String[] payment = new String[4];
 		payment[0] = "Visa";
 		payment[1] = "Egoitz";
@@ -37,6 +46,20 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 		payment[1] = "Egoitz";
 		payment[2] = "12345";
 		account.put("test@opendeusto.es", new User("test@opendeusto.es", "Facebook", payment));
+		
+		//Google Test Accounts
+		
+		payment[0] = "Visa";
+		payment[1] = "Alvaro";
+		payment[2] = "12345";
+		payment[3] = "123";
+		account.put("alvaroh@opendeusto.es", new User("alvaroh@opendeusto.es", "Google+", payment));
+		payment[0] = "Visa";
+		payment[1] = "Egoitz";
+		payment[2] = "12345";
+		account.put("alvarotest@opendeusto.es", new User("test@opendeusto.es", "Google+", payment));
+		
+		
 	}
 
 	
@@ -45,37 +68,36 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 
 	@Override
 	public void searchForFlight() throws RemoteException {
-		// TODO Auto-generated method stub
+		
 		System.out.println("TODO-searchForFlight");
 	}
 
 	@Override
 	public void bookFlight() throws RemoteException {
-		// TODO Auto-generated method stub
+		
 		System.out.println("TODO-bookFlight");
 	}
 
 	@Override
 	public boolean loginUser(String method,String email,String password) throws RemoteException {
-		// TODO Auto-generated method stub
+
 		return aS.loginUser(method, email, password);
 	}
 
 	@Override
 	public void makePayment() throws RemoteException {
-		// TODO Auto-generated method stub
 		System.out.println("TODO-makePayment");
 	}
 
 	@Override
 	public void notifyAirline() throws RemoteException {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	@Override
 	public void registerUser(String method,String email,String password, String[] payment) throws RemoteException {
-		// TODO Auto-generated method stub
+		
 		account.put(email, new User(email, method, payment));
 		aS.registerUser(method, email, password);
 	}
