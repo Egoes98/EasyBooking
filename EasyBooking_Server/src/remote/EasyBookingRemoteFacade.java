@@ -4,9 +4,8 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.HashMap;
 
-import authorization.AuthorizationServce;
-import authorization.FacebookGateway;
-import authorization.GoogleGateway;
+import airlines.*;
+import authorization.*;
 
 import easyBookingData.*;
 
@@ -19,20 +18,28 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	private String serverName;
 	private FacebookGateway Facebookservice = new FacebookGateway();
 	private GoogleGateway GoogleService = new GoogleGateway();
-	AuthorizationServce aS;
+	private VuelingGateway VuelingService = new VuelingGateway();
+	private IberiaGateway IberiaService = new IberiaGateway();
+	AuthorizationService aS;
+	AirlineService aiS;
 	HashMap<String, User> account = new HashMap<String, User>();
 
 	public EasyBookingRemoteFacade(String ip, String port, String serverName, String AuthorizationName) throws RemoteException {
 		super();
 		this.serverName = serverName;
 		
-		//TODO -> solo hacer un setService, asi que esto se tendria que pasar al authorizationService ya que solo hay un servidor de Authorization
+		//Authorization
 		
 		Facebookservice.setService(ip, port, "Facebook");
 		GoogleService.setService(ip, port, "Google");
-	
 		
-		aS = new AuthorizationServce(Facebookservice, GoogleService);
+		aS = new AuthorizationService(Facebookservice, GoogleService);
+		
+		//Airlines
+		
+		VuelingService.setService(ip, port, "Vueling");
+		
+		aiS = new AirlineService(VuelingService, IberiaService);
 		
 		//Facebook Test Accounts
 		
@@ -69,13 +76,13 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	@Override
 	public void searchForFlight() throws RemoteException {
 		
-		System.out.println("TODO-searchForFlight");
+		aiS.searchFlight();
 	}
 
 	@Override
 	public void bookFlight() throws RemoteException {
 		
-		System.out.println("TODO-bookFlight");
+		aiS.bookFlight();
 	}
 
 	@Override

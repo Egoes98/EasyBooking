@@ -4,12 +4,12 @@ import java.rmi.RemoteException;
 
 import remote.IAuthorization;
 
-public class AuthorizationServce implements IAuthorizationService{
+public class AuthorizationService implements IAuthorizationService{
 
 	FacebookGateway facebook;
 	GoogleGateway google;
 	
-	public AuthorizationServce(FacebookGateway facebook, GoogleGateway google) {
+	public AuthorizationService(FacebookGateway facebook, GoogleGateway google) {
 		// TODO Auto-generated constructor stub
 		this.facebook = facebook;
 		this.google = google;
