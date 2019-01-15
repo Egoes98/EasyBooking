@@ -77,6 +77,8 @@ public class Controller {
     
     public static void main(String[] args) throws RemoteException {    	
     	new Controller(args);
-    	
+    }
+    public User getCurrentUser() throws RemoteEception{
+    	return a.getCurrentUser();
     }
 }
