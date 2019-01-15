@@ -2,12 +2,18 @@ package remote;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import airlines.*;
 import authorization.*;
-
+import dto.FlightAssembler;
+import dto.FlightDTO;
 import easyBookingData.*;
+import payment.PayPalGateway;
+import payment.PaymentService;
+import payment.VisaGateway;
 
 public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEasyBookingRemoteFacade {
 
@@ -20,8 +26,11 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	private GoogleGateway GoogleService = new GoogleGateway();
 	private VuelingGateway VuelingService = new VuelingGateway();
 	private IberiaGateway IberiaService = new IberiaGateway();
+	private VisaGateway VisaService = new VisaGateway();
+	private PayPalGateway PayPalService = new PayPalGateway();
 	AuthorizationService aS;
 	AirlineService aiS;
+	PaymentService pS;
 	HashMap<String, User> account = new HashMap<String, User>();
 
 	public EasyBookingRemoteFacade(String ip, String port, String serverName, String AuthorizationName) throws RemoteException {
@@ -40,6 +49,18 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 		VuelingService.setService(ip, port, "Vueling");
 		
 		aiS = new AirlineService(VuelingService, IberiaService);
+		
+		aiS.bookFlight();
+		aiS.searchFlight();
+		
+		//Payment
+		
+		VisaService.setService(ip, port, "Visa");
+		PayPalService.setService(ip, port, "PayPal");
+		
+		pS = new PaymentService(VisaService, PayPalService);
+		
+		pS.makePayment();
 		
 		//Facebook Test Accounts
 		
@@ -78,6 +99,16 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 		
 		aiS.searchFlight();
 	}
+	
+	public List<FlightDTO> getFlights(){
+		List<FlightDTO> flights = new ArrayList<>();
+		
+		FlightAssembler a = new FlightAssembler();
+		//flights = a.assemble(searchForFlight());
+		return flights;
+	}
+	
+	//--------------------------------------------
 
 	@Override
 	public void bookFlight() throws RemoteException {

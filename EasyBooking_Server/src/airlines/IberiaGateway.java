@@ -21,7 +21,7 @@ public class IberiaGateway implements IAirlineService{
 		//args[0] = Server IP
 		String serverIP = "0.0.0.0";
 		//args[1] = Server socket port
-		int serverPort = 35600;
+		int serverPort = 1100;
 				
 		try (Socket tcpSocket = new Socket(serverIP, serverPort);
 				 //Streams to send and receive information are created from the Socket
@@ -59,7 +59,7 @@ public class IberiaGateway implements IAirlineService{
 		//args[0] = Server IP
 		String serverIP = "0.0.0.0";
 		//args[1] = Server socket port
-		int serverPort = 35600;
+		int serverPort = 1100;
 				
 		try (Socket tcpSocket = new Socket(serverIP, serverPort);
 				 //Streams to send and receive information are created from the Socket
@@ -70,7 +70,7 @@ public class IberiaGateway implements IAirlineService{
 					
 				//String ftext =  origlan +"#"+newlan+"#"+ text;
 					
-				out.writeUTF("search");
+				out.writeUTF("book");
 				System.out.println(" - TCPSocketClient: Sent data to '" + tcpSocket.getInetAddress().getHostAddress() + ":" + tcpSocket.getPort() + "' ->" + "search" );
 						
 				//Read response (a String) from the server

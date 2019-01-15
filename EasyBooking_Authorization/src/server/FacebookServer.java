@@ -5,9 +5,6 @@ import java.rmi.Naming;
 import remote.Facebook;
 import remote.IAuthorization;
 
-
-
-
 public class FacebookServer{
 
 	public static void main(String[] args) {

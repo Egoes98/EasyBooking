@@ -28,7 +28,7 @@ public class AirlineService implements IAirlineService{
 	public void bookFlight() throws RemoteException {
 		// TODO Auto-generated method stub
 		iberia.bookFlight();
-		vueling.searchFlight();
+		vueling.bookFlight();
 	}
 	
 	

@@ -1,11 +1,14 @@
 package controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.rmi.RemoteException;
 
 
 import remote.IEasyBookingRemoteFacade;
 import serviceLocator.RMIServiceLocator;
 import GUI.*;
+import dto.FlightDTO;
 
 public class Controller {
 	private RMIServiceLocator rsl;
@@ -30,6 +33,18 @@ public class Controller {
 		 */
 		
 		
+	}
+	
+	public List<FlightDTO> getFlights(){ 
+		List<FlightDTO> flights = new ArrayList<>();
+		
+		try {
+			flights = rsl.getService().getFlights();
+		}catch (RemoteException e) {
+			e.printStackTrace();
+		}
+		
+		return flights;
 	}
 	
   

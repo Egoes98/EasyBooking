@@ -19,7 +19,9 @@ public class IberiaServer{
 		}
 		
 		//args[1] = Server socket port
+		
 		int serverPort = Integer.parseInt(args[0]);
+		
 		
 		/**
 		 * NOTE: try-with resources Statement - https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
