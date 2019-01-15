@@ -27,9 +27,9 @@ public class PayPalGateway implements IPaymentService{
 	}
 
 	@Override
-	public void makePayment() throws RemoteException {
-		
-		
+	public boolean makePayment() throws RemoteException {	
+		//TODO
+		return false;
 	}
 	
 	

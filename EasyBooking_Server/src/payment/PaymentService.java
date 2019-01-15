@@ -4,25 +4,18 @@ import java.rmi.RemoteException;
 
 import remote.IAuthorization;
 
-public class PaymentService implements IPaymentService{
-
-	VisaGateway visa;
-	PayPalGateway payPal;
+public enum PaymentService{
+	INSTANCE;
 	
-	public PaymentService(VisaGateway visa, PayPalGateway payPal) {
-		// TODO Auto-generated constructor stub
-		this.visa = visa;
-		this.payPal = payPal;
+	public static IPaymentService createGateway(String method, String ip, String port) {
+		if(method.equals("Visa")) {
+			VisaGateway v = new VisaGateway();
+			v.setService(ip, port, "Visa");
+			return v;
+		}else {
+			PayPalGateway p = new PayPalGateway();
+			p.setService(ip, port, "Paypal");
+			return p;
+		}
 	}
-	
-
-
-	@Override
-	public void makePayment() throws RemoteException {
-		visa.getService().makePayment();
-		payPal.getService().makePayment();
-		
-	}
-
-
 }

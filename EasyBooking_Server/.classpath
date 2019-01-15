@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" output="bin" path="src"/>
-	<classpathentry kind="var" path="JRE_LIB" sourcepath="JRE_SRC"/>
-	<classpathentry kind="con" path="C:/SoftLabs/SD/EasyBooking/EasyBooking_Server/bin"/>
-	<classpathentry kind="src" path="/EasyBooking_Authorization"/>
-	<classpathentry kind="lib" path="C:/SoftLabs/SD/EasyBooking/EasyBooking_Server/lib/Authorization.jar"/>
-	<classpathentry kind="lib" path="lib/Airlines.jar"/>
-	<classpathentry kind="src" path="/EasyBooking_Airlines"/>
-	<classpathentry kind="lib" path="C:/SoftLabs/SD/EasyBooking/EasyBooking_Client/lib/EasyBooking.jar"/>
-	<classpathentry kind="lib" path="lib/Payment.jar"/>
+	<classpathentry kind="var" path="JRE_LIB" rootpath="JRE_SRCROOT" sourcepath="JRE_SRC"/>
+	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Server/lib/Airlines.jar"/>
+	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Server/lib/Authorization.jar"/>
+	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Server/lib/Payment.jar"/>
+	<classpathentry kind="con" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Server/bin"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

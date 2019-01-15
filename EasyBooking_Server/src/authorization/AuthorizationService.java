@@ -4,38 +4,18 @@ import java.rmi.RemoteException;
 
 import remote.IAuthorization;
 
-public class AuthorizationService implements IAuthorizationService{
-
-	FacebookGateway facebook;
-	GoogleGateway google;
+public enum AuthorizationService{
+	INSTANCE;
 	
-	public AuthorizationService(FacebookGateway facebook, GoogleGateway google) {
-		// TODO Auto-generated constructor stub
-		this.facebook = facebook;
-		this.google = google;
-	}
-	
-	
-	
-	@Override
-	public void registerUser(String method, String email, String password) throws RemoteException {
-		// TODO Auto-generated method stub
-		if(method.equals("Google+")){
-			google.registerUser(method,email,password);
-		}else{
-			facebook.registerUser(method, email, password);
+	public static IAuthorizationService createGateway(String method, String ip, String port) {
+		if(method.equals("Facebook")) {
+			FacebookGateway f = new FacebookGateway();
+			f.setService(ip, port, "Facebook");
+			return f; 
+		}else {
+			GoogleGateway g = new GoogleGateway();
+			g.setService(ip, port, "Google");
+			return g;
 		}
 	}
-
-	@Override
-	public boolean loginUser(String method, String email, String password) throws RemoteException {
-		// TODO Auto-generated method stub
-		if(method.equals("Google+")){
-			return google.loginUser(method, email, password);
-		}else{
-			return facebook.loginUser(method, email, password);
-		}
-	}
-
-
 }

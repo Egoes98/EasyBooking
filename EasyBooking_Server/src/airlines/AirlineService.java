@@ -5,32 +5,16 @@ import java.rmi.RemoteException;
 import authorization.FacebookGateway;
 import authorization.GoogleGateway;
 
-public class AirlineService implements IAirlineService{
-	
-	IberiaGateway iberia;
-	VuelingGateway vueling;
-	
-	
-	public AirlineService(VuelingGateway vueling, IberiaGateway iberia) {
-		// TODO Auto-generated constructor stub
-		this.vueling = vueling;
-		this.iberia = iberia;
+public enum AirlineService{
+	INSTANCE;
+	public static IAirlineService createGateway(String airline,String ip, String port) {
+		if(airline.equals("Vueling")) {
+			VuelingGateway v = new VuelingGateway();
+			v.setService(ip, port, "Vueling");
+			return v;
+		}else{
+			IberiaGateway i = new IberiaGateway();
+			return i;
+		}
 	}
-	
-	
-	@Override
-	public void searchFlight() throws RemoteException {
-		// TODO Auto-generated method stub
-		iberia.searchFlight();
-		vueling.searchFlight();
-	}
-	@Override
-	public void bookFlight() throws RemoteException {
-		// TODO Auto-generated method stub
-		iberia.bookFlight();
-		vueling.bookFlight();
-	}
-	
-	
-
 }

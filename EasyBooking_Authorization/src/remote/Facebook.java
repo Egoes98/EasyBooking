@@ -31,12 +31,4 @@ public class Facebook extends UnicastRemoteObject implements IAuthorization{
 			return false;
 		}
 	}
-
-	@Override
-	public void registerUser(String email,String password) throws RemoteException {
-		// TODO Auto-generated method stub
-		System.out.println(email + " " + password);
-		account.put(email, password);
-	}
-
 }

@@ -13,8 +13,8 @@ private IAirlines service;
 		
 	}
 	
-	public void setService(String ip, String port, String FacebookName) {
-		String name = "//" + ip + ":" + port + "/" + FacebookName;
+	public void setService(String ip, String port, String AirlineName) {
+		String name = "//" + ip + ":" + port + "/" + AirlineName;
 		try {
 			service = (IAirlines) java.rmi.Naming.lookup(name);
 		}catch (Exception e) {

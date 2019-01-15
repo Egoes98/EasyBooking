@@ -30,11 +30,5 @@ public class Google extends UnicastRemoteObject implements IAuthorization{
 			return false;
 		}
 	}
-
-	public void registerUser(String email,String password) throws RemoteException {
-		// TODO Auto-generated method stub
-		System.out.println(email + " " + password);
-		account.put(email, password);
-	}
 	
 }
