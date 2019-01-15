@@ -17,6 +17,7 @@ import javax.swing.JPopupMenu;
 import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.rmi.RemoteException;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -117,6 +118,16 @@ public class Booking {
 		JButton btnSearch = new JButton("Search");
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				String origin = textField_1.getText().toLowerCase();
+				String destiny = textField.getText().toLowerCase();
+				String date = day.getSelectedItem() + "/" + month.getSelectedItem() + "/" + year.getSelectedItem();
+				int seats = Integer.parseInt(textField_2.getText());
+				try {
+					controller.searchForFlight(origin,destiny,date,seats);
+				} catch (RemoteException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		});
 		btnSearch.setBounds(119, 91, 89, 23);

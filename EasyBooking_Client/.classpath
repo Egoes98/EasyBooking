@@ -3,6 +3,7 @@
 	<classpathentry kind="src" output="bin" path="src"/>
 	<classpathentry kind="var" path="JRE_LIB" rootpath="JRE_SRCROOT" sourcepath="JRE_SRC"/>
 	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Client/lib/EasyBooking.jar"/>
+	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Client/lib/flightDTO.jar"/>
 	<classpathentry kind="con" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Client/bin"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
