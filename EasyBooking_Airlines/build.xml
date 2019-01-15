@@ -38,7 +38,7 @@
 	</target>	
     
 	<target name="Iserver" depends="build" description="Runs Server program">
-		<java classname="server.IberiaServer" classpath="full.classpath" fork="true">
+		<java classname="server.IberiaServer" classpath="${classpath}" fork="true">
         	<jvmarg value="-Djava.rmi.server.codebase=file:${build.dir}/"/>
 			<jvmarg value="-Djava.security.policy=${policy.file}"/>			 
 	 		<arg value="${server.Iport}"/> 
@@ -46,7 +46,7 @@
     </target>
 	
 	<target name="Vserver" depends="build" description="Runs Server program">
-			<java classname="server.VuelingServer" classpath="full.classpath" fork="true">
+			<java classname="server.VuelingServer" classpath="${classpath}" fork="true">
 	        	<jvmarg value="-Djava.rmi.server.codebase=file:${build.dir}/"/>
 				<jvmarg value="-Djava.security.policy=${policy.file}"/>			
 	        	<arg value="${server.IP}"/> 

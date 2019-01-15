@@ -100,7 +100,7 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	public boolean bookFlight() throws RemoteException {
 		if(makePayment()) {
 			notifyAirline();
-			currentAccount.makeReservation(new Reservation());
+			//currentAccount.makeReservation(new Reservation());
 			return true;
 		}else {
 			return false;
