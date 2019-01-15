@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 
 import controller.Controller;
+import dto.FlightDTO;
 
 import javax.swing.JComboBox;
 import java.awt.Choice;
@@ -18,6 +19,7 @@ import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.rmi.RemoteException;
+import java.util.List;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -28,6 +30,7 @@ public class Booking {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	Controller controller;
+	List<FlightDTO> flights = new ArrayList<>();
 	/**
 	 * Create the application.
 	 */
@@ -123,7 +126,7 @@ public class Booking {
 				String date = day.getSelectedItem() + "/" + month.getSelectedItem() + "/" + year.getSelectedItem();
 				int seats = Integer.parseInt(textField_2.getText());
 				try {
-					controller.searchForFlight(origin,destiny,date,seats);
+					flights = controller.searchForFlight(origin,destiny,date,seats);
 				} catch (RemoteException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

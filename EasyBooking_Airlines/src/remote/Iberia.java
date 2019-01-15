@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.net.Socket;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -19,6 +20,8 @@ public class Iberia extends Thread implements IAirlines{
 	private DataInputStream in;
 	private DataOutputStream out;
 	private Socket tcpSocket;
+	private List<Flight> sendFlight = new ArrayList<Flight>();
+	private List<Flight> flights = new ArrayList<Flight>();
 	
 	public Iberia(Socket socket) {
 		try {
@@ -29,6 +32,12 @@ public class Iberia extends Thread implements IAirlines{
 		} catch (IOException e) {
 			System.err.println("# EchoService - TCPConnection IO error:" + e.getMessage());
 		}
+		
+		flights = new ArrayList<>();
+		flights.add(new Flight(1, 2, "11:30", "13:00", "bilbao", "madrid", 30, "16/01/2019"));
+		flights.add(new Flight(2, 2, "16:30", "19:00", "bilbao", "madrid", 40, "16/01/2019"));
+		flights.add(new Flight(3, 2, "10:30", "13:00", "bilbao", "madrid", 2,  "17/01/2019"));
+		flights.add(new Flight(1, 2, "17:30", "20:00", "bilbao", "madrid", 50, "18/01/2019"));
 	}
 	
 	public void run() {
@@ -38,15 +47,19 @@ public class Iberia extends Thread implements IAirlines{
 				String data = this.in.readUTF();
 				System.out.println("   - EchoService - Received data from '" + tcpSocket.getInetAddress().getHostAddress() + ":" + tcpSocket.getPort() + "' -> '" + data + "'");							
 				
-				
-				if(data.equals("search")) {
-					//searchFlight();
+				String[] a = data.split("#");
+				if(a[0].equals("search")) {
+					
+					sendFlight = searchFlight(a[1], a[2], a[3],Integer.parseInt(a[4]));
+					String send = "";
+					for(Flight f : sendFlight) {
+						send += f.getFlight_number()+"#"+f.getAirline_code()+"#"+f.getDepartureTime()+"#"+f.getArrivalTime()+"#"+f.getOrigin()+"#"+f.getDestiny()+"#"+f.getSeats()+"#"+f.getDate()+"-" ;
+					}
+					this.out.writeUTF(send);
 				}else {
 					bookFlight();
 				}
-				
-				//Send response to the client
-				this.out.writeUTF(data.toUpperCase());			
+					
 				System.out.println("   - EchoService - Sent data to '" + tcpSocket.getInetAddress().getHostAddress() + ":" + tcpSocket.getPort() + "' -> '" + data.toUpperCase() + "'");
 			} catch (EOFException e) {
 				System.err.println("   # EchoService - TCPConnection EOF error" + e.getMessage());
@@ -63,9 +76,15 @@ public class Iberia extends Thread implements IAirlines{
 	
 	@Override
 	public List<Flight> searchFlight(String OriginAirpot, String DestinyAirport, String date, int seats) throws RemoteException {
-		System.out.println("search");
-		return null;
 		
+		List<Flight> ret = new ArrayList<>();
+		
+		for(Flight f : flights) {
+			if(f.getOrigin().equals(OriginAirpot) && f.getDestiny().equals(DestinyAirport) && f.getSeats() == seats && f.getDate().equals(date)) {
+				ret.add(f);
+			}
+		}
+		return ret;
 	}
 	@Override
 	public void bookFlight() throws RemoteException {
