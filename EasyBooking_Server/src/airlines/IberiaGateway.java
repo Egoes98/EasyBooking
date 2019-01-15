@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.List;
 
 import easyBookingData.Flight;
@@ -21,6 +22,7 @@ public class IberiaGateway implements IAirlineService{
 	@Override
 	public List<Flight> searchFlight(String OriginAirpot, String DestinyAirport, String date, int seats) throws RemoteException{
 		
+		List<Flight> ret = new ArrayList<Flight>();
 		//args[0] = Server IP
 		String serverIP = "0.0.0.0";
 		//args[1] = Server socket port
@@ -40,9 +42,14 @@ public class IberiaGateway implements IAirlineService{
 				
 				//Read response (a String) from the server
 				String data = in.readUTF();
-				/*
-				 * Transformar este data en vuelos
-				 */
+				
+				String[] lista = data.split("-");
+				
+				for(int i = 0; i <= lista.length; i++) {
+					String[] info = lista[i].split("#");
+					ret.add(new Flight(Integer.parseInt(lista[0]), Integer.parseInt(lista[1]), lista[2], lista[3], lista[4], lista[5], Integer.parseInt(lista[6]), lista[7]));
+					
+				}
 				
 				System.out.println(" - TCPSocketClient: Received data from '" + tcpSocket.getInetAddress().getHostAddress() + ":" + tcpSocket.getPort() + "' -> '" + data + "'");
 				//return data;
@@ -54,7 +61,7 @@ public class IberiaGateway implements IAirlineService{
 				System.err.println("# TCPSocketClient: IO error: " + e.getMessage());
 			}
 		
-		return null;		
+		return ret;		
 
 	}
 

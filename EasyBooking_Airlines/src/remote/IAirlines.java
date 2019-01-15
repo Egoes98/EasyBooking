@@ -4,7 +4,7 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
 
-import easyBookingData.Flight;
+import data.Flight;
 
 public interface IAirlines extends Remote{
 

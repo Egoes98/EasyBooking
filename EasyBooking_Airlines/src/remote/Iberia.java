@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import easyBookingData.Flight;
+import data.Flight;
 
 public class Iberia extends Thread implements IAirlines{
 
@@ -80,12 +80,13 @@ public class Iberia extends Thread implements IAirlines{
 		List<Flight> ret = new ArrayList<>();
 		
 		for(Flight f : flights) {
-			if(f.getOrigin().equals(OriginAirpot) && f.getDestiny().equals(DestinyAirport) && f.getSeats() == seats && f.getDate().equals(date)) {
+			if(f.getOrigin().equals(OriginAirpot) && f.getDestiny().equals(DestinyAirport) && f.getSeats() <= seats && f.getDate().equals(date)) {
 				ret.add(f);
 			}
 		}
 		return ret;
 	}
+	
 	@Override
 	public void bookFlight() throws RemoteException {
 		// TODO Auto-generated method stub

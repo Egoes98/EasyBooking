@@ -6,7 +6,7 @@
    	<property name="build.dir" location="bin"/>
 	<property name="dist.dir" location="dist"/>
 	<property name="classpath" location="bin"/>
-	<property name="export.file" value="EasyBooking.jar"/>
+	<property name="export.file" value="Flight.jar"/>
 	<property name="server.port" value="1099"/> 
 	<property name="server.IP" value="127.0.0.1"/> 
 	<property name="server.Name1" value="Server"/>
@@ -33,7 +33,7 @@
 	<target name="export" depends="build" description="Export the project into a .jar file">
 		<delete dir="${dist.dir}"/>
 		<mkdir dir="${dist.dir}"/>
-		<jar destfile="${dist.dir}/${export.file}" basedir="${build.dir}" includes="**/IEasyBookingRemoteFacade.class"/>
+		<jar destfile="${dist.dir}/${export.file}" basedir="${build.dir}" includes="**/Flight.class"/>
 	</target>	
     
 	<target name="server" depends="build" description="Runs Server program">

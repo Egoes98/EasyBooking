@@ -41,6 +41,10 @@ public class Controller {
 		
 		try {
 			flights = rsl.getService().searchForFlight(OriginAirpot, DestinyAirport, date, seats);
+			for(FlightDTO f : flights) {
+				System.out.println(f.getFlight_number()+"#"+f.getAirline_code()+"#"+f.getDepartureTime()+"#"+f.getArrivalTime()+"#"+f.getOrigin()+"#"+f.getDestiny()+"#"+f.getSeats()+"#"+f.getDate());
+				
+			}
 		}catch (RemoteException e) {
 			e.printStackTrace();
 		}

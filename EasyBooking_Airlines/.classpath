@@ -4,6 +4,5 @@
 	<classpathentry kind="var" path="JRE_LIB" sourcepath="JRE_SRC"/>
 	<classpathentry kind="con" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Airlines/bin"/>
 	<classpathentry kind="src" path="/EasyBooking_Server"/>
-	<classpathentry kind="lib" path="lib/Flight.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
