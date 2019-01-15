@@ -89,10 +89,10 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	//--------------------------------------------
 
 	@Override
-	public boolean bookFlight() throws RemoteException {
+	public boolean bookFlight(FlightDTO f) throws RemoteException {
 		if(makePayment()) {
 			notifyAirline();
-			//currentAccount.makeReservation(new Reservation());
+			currentAccount.makeReservation(f);
 			return true;
 		}else {
 			return false;
@@ -135,7 +135,7 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 
 	}
 	
-	public void getCurrentUser() throws RemoteException{
-		//return currentAccount;
+	public User getCurrentUser() throws RemoteException{
+		return currentAccount;
 	}
 }

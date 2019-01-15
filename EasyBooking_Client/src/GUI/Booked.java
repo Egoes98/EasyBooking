@@ -6,15 +6,25 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 import controller.Controller;
+import dto.FlightDTO;
 
 import javax.swing.JList;
 import javax.swing.JLabel;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import java.awt.event.ActionEvent;
 
 public class Booked {
 
 	private JFrame frame;
 	Controller controller;
+	List<FlightDTO> flights = new ArrayList<>();
+	DefaultListModel listModel = new DefaultListModel();
+	JList list;
+
 
 	/**
 	 * Create the application.
@@ -34,7 +44,7 @@ public class Booked {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JList list = new JList();
+		list = new JList();
 		list.setBounds(10, 90, 336, 145);
 		frame.getContentPane().add(list);
 		
@@ -44,8 +54,22 @@ public class Booked {
 		frame.getContentPane().add(lblBookedFlights);
 		
 		JButton btnCancelFlight = new JButton("Cancel Flight");
+		btnCancelFlight.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				controller.getCurrentUser().cancelReservation(list.getAnchorSelectionIndex());
+			}
+		});
 		btnCancelFlight.setBounds(133, 56, 123, 23);
 		frame.getContentPane().add(btnCancelFlight);
+	}
+	
+	public void updateList() {
+		this.flights = controller.getCurrentUser().getReservation();
+		for (int i = 0; i < this.flights.size(); i++)
+		{
+		    listModel.addElement(this.flights.get(i));
+		}
+		list.setModel(listModel);
 	}
 
 }
