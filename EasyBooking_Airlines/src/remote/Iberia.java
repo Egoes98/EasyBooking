@@ -8,6 +8,9 @@ import java.net.Socket;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.HashMap;
+import java.util.List;
+
+import easyBookingData.Flight;
 
 public class Iberia extends Thread implements IAirlines{
 
@@ -59,8 +62,9 @@ public class Iberia extends Thread implements IAirlines{
 	}
 	
 	@Override
-	public void searchFlight() throws RemoteException {
+	public List<Flight> searchFlight() throws RemoteException {
 		System.out.println("search");
+		return null;
 		
 	}
 	@Override

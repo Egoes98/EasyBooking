@@ -5,9 +5,10 @@ import java.util.List;
 
 public class User {
 
+	
 	private String email;
 	private String authorization_sys;
-	private Reservation reservation;
+	private List<Reservation> reservation;
 	
 	private String payment_method;
 	//Visa
@@ -43,11 +44,11 @@ public class User {
 		res.remove(reservation);
 	}
 	
-	public Reservation getReservation() {
+	public List<Reservation> getReservation() {
 		return reservation;
 	}
 
-	public void setReservation(Reservation reservation) {
+	public void setReservation(List<Reservation> reservation) {
 		this.reservation = reservation;
 	}
 

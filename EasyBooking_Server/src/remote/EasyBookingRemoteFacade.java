@@ -73,9 +73,16 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 
 	@Override
 	public List<FlightDTO> searchForFlight() throws RemoteException {
-		AirlineService.createGateway("Iberia",ip,port).searchFlight();
-		AirlineService.createGateway("Vueling",ip,port).searchFlight();
-		return  null;
+		List<FlightDTO> flights = new ArrayList<>();
+		List<FlightDTO> flightsb = new ArrayList<>();
+		
+		FlightAssembler a = new FlightAssembler();
+		
+		flights = a.assemble(AirlineService.createGateway("Iberia",ip,port).searchFlight());
+		flightsb = a.assemble(AirlineService.createGateway("Vueling",ip,port).searchFlight());
+		
+		flights.addAll(flightsb);
+		return  flights;
 	}
 	
 	public List<FlightDTO> getFlights(){

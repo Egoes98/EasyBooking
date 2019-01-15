@@ -63,7 +63,7 @@ public class Login {
 					//Parametros de conecxion
 					String email = textField.getText();
 					String password = "" + textField_1.getText();
-					correct = controller.loginUser("Facebook",email,password);
+					correct = controller.loginUser(email,password);
 				} catch (RemoteException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -115,7 +115,7 @@ public class Login {
 					//Parametros de conecxion
 					String email = textField.getText();
 					String password = "" + textField_1.getText();
-					correct = controller.loginUser("Google+",email,password);
+					correct = controller.loginUser(email,password);
 				} catch (RemoteException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();

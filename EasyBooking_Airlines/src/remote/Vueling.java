@@ -3,6 +3,9 @@ package remote;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.HashMap;
+import java.util.List;
+
+import easyBookingData.Flight;
 
 public class Vueling extends UnicastRemoteObject implements IAirlines{
 
@@ -17,8 +20,9 @@ public class Vueling extends UnicastRemoteObject implements IAirlines{
 	}
 	
 	@Override
-	public void searchFlight() throws RemoteException {
+	public List<Flight> searchFlight() throws RemoteException {
 		System.out.println("search");
+		return null;
 		
 	}
 	@Override

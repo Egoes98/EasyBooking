@@ -10,6 +10,7 @@ import serviceLocator.RMIServiceLocator;
 import GUI.*;
 import dto.FlightDTO;
 
+
 public class Controller {
 	private RMIServiceLocator rsl;
 	
@@ -39,7 +40,7 @@ public class Controller {
 		List<FlightDTO> flights = new ArrayList<>();
 		
 		try {
-			flights = rsl.getService().getFlights();
+			flights = rsl.getService().searchForFlight();
 		}catch (RemoteException e) {
 			e.printStackTrace();
 		}
@@ -56,9 +57,9 @@ public class Controller {
     	IEasyBookingRemoteFacade a = rsl.getService();
     	a.bookFlight();
     }
-    public boolean loginUser(String method, String email, String password) throws RemoteException{
+    public boolean loginUser(String email, String password) throws RemoteException{
     	IEasyBookingRemoteFacade a = rsl.getService();
-    	return a.loginUser(method,email,password);
+    	return a.loginUser(email, password);
     }
     public void makePayment() throws RemoteException{
     	IEasyBookingRemoteFacade a = rsl.getService();
