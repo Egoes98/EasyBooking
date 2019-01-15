@@ -19,7 +19,7 @@ public class IberiaGateway implements IAirlineService{
 	}
 	
 	@Override
-	public List<Flight> searchFlight() throws RemoteException{
+	public List<Flight> searchFlight(String OriginAirpot, String DestinyAirport, String date, int seats) throws RemoteException{
 		
 		//args[0] = Server IP
 		String serverIP = "0.0.0.0";

@@ -7,7 +7,7 @@
 	<property name="dist.dir" location="dist"/>
 	<property name="classpath" location="bin"/>
 	<property name="export.file" value="Airlines.jar"/>
-	<property name="server.port" value="1101"/> 
+	<property name="server.port" value="1099"/> 
 	<property name="server.Iport" value="1100"/> 
 	<property name="server.IP" value="127.0.0.1"/> 
 	<property name="server.Name1" value="Vueling"/>

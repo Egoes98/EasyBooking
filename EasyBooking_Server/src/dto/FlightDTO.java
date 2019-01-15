@@ -11,15 +11,25 @@ public class FlightDTO implements Serializable{
 	String origin;
 	String destiny;
 	int seats;
+	String date;
 	
-	public FlightDTO(int flight_number, int airline_code, String departureTime, String arrivalTime,String destiny, String origin, int seats) {
+	public FlightDTO(int flight_number, int airline_code, String departureTime, String arrivalTime, String origin, String destiny, int seats, String date) {
 		this.flight_number = flight_number;
 		this.airline_code = airline_code;
 		this.departureTime = departureTime;
 		this.arrivalTime = arrivalTime;
 		this.seats = seats;
 		this.destiny = destiny;
-		this.origin = origin;
+		this.seats = seats;
+		this.date = date;
+	}
+	
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
 	}
 
 	public int getFlight_number() {

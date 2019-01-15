@@ -40,7 +40,7 @@ public class Iberia extends Thread implements IAirlines{
 				
 				
 				if(data.equals("search")) {
-					searchFlight();
+					//searchFlight();
 				}else {
 					bookFlight();
 				}
@@ -62,7 +62,7 @@ public class Iberia extends Thread implements IAirlines{
 	}
 	
 	@Override
-	public List<Flight> searchFlight() throws RemoteException {
+	public List<Flight> searchFlight(String OriginAirpot, String DestinyAirport, String date, int seats) throws RemoteException {
 		System.out.println("search");
 		return null;
 		

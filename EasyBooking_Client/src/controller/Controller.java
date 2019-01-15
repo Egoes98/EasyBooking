@@ -36,11 +36,11 @@ public class Controller {
 		
 	}
 	
-	public List<FlightDTO> getFlights(){ 
+	public List<FlightDTO> searchForFlight(String OriginAirpot, String DestinyAirport, String date, int seats){ 
 		List<FlightDTO> flights = new ArrayList<>();
 		
 		try {
-			flights = rsl.getService().searchForFlight();
+			flights = rsl.getService().searchForFlight(OriginAirpot, DestinyAirport, date, seats);
 		}catch (RemoteException e) {
 			e.printStackTrace();
 		}
@@ -49,10 +49,6 @@ public class Controller {
 	}
 	
   
-    public void searchForFlight() throws RemoteException{
-    	IEasyBookingRemoteFacade a = rsl.getService();
-    	a.searchForFlight();
-    }
     public void bookFlight() throws RemoteException{
     	IEasyBookingRemoteFacade a = rsl.getService();
     	a.bookFlight();

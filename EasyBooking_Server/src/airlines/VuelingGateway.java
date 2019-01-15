@@ -30,10 +30,10 @@ private IAirlines service;
 	}
 
 	@Override
-	public List<Flight> searchFlight() throws RemoteException {
+	public List<Flight> searchFlight(String OriginAirpot, String DestinyAirport, String date, int seats) throws RemoteException {
 		
 		
-		return service.searchFlight();
+		return service.searchFlight(OriginAirpot, DestinyAirport, date, seats);
 		
 	}
 
