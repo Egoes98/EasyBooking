@@ -17,5 +17,5 @@ public interface IEasyBookingRemoteFacade extends Remote {
     public void notifyAirline() throws RemoteException;
     public boolean registerUser(String method,String email,String password, String[] payment) throws RemoteException;
 	public boolean loginUser(String email, String password) throws RemoteException;
-	public User getCurrentUser();
+	public void getCurrentUser();
  }

@@ -140,7 +140,7 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 
 	}
 	
-	public User getCurrentUser() {
-		return currentAccount;
+	public void getCurrentUser() {
+		//return currentAccount;
 	}
 }
