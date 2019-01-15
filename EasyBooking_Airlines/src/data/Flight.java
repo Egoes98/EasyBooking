@@ -17,6 +17,7 @@ public class Flight {
 		this.departureTime = departureTime;
 		this.arrivalTime = arrivalTime;
 		this.seats = seats;
+		this.origin = origin;
 		this.destiny = destiny;
 		this.seats = seats;
 		this.date = date;

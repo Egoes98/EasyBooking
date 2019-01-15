@@ -32,7 +32,6 @@ public class Controller {
 		 * makePayment();
 		 * 
 		 */
-		
 	}
 	
 	public List<FlightDTO> searchForFlight(String OriginAirpot, String DestinyAirport, String date, int seats){ 
@@ -70,7 +69,6 @@ public class Controller {
     }
     
     
-    
     public void exit(){
     	System.exit(0);
     }
@@ -78,7 +76,5 @@ public class Controller {
     public static void main(String[] args) throws RemoteException {    	
     	new Controller(args);
     }
-    public User getCurrentUser() throws RemoteEception{
-    	return a.getCurrentUser();
-    }
+    
 }

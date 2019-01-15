@@ -56,7 +56,7 @@ public class Booked {
 		JButton btnCancelFlight = new JButton("Cancel Flight");
 		btnCancelFlight.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				controller.getCurrentUser().cancelReservation(list.getAnchorSelectionIndex());
+				//controller.getCurrentUser().cancelReservation(list.getAnchorSelectionIndex());
 			}
 		});
 		btnCancelFlight.setBounds(133, 56, 123, 23);
@@ -64,7 +64,7 @@ public class Booked {
 	}
 	
 	public void updateList() {
-		this.flights = controller.getCurrentUser().getReservation();
+		//this.flights = controller.getCurrentUser().getReservation();
 		for (int i = 0; i < this.flights.size(); i++)
 		{
 		    listModel.addElement(this.flights.get(i));

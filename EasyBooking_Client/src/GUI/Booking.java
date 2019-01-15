@@ -67,10 +67,15 @@ public class Booking {
 		btnBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				FlightDTO f = (FlightDTO) list.getSelectedValue();
-				if(controller.bookFlight(f)) {
-					b.updateList();
-				}else {
-					System.out.println("Cant book");
+				try {
+					if(controller.bookFlight(f)) {
+						b.updateList();
+					}else {
+						System.out.println("Cant book");
+					}
+				} catch (RemoteException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
 			}
 		});
@@ -140,12 +145,7 @@ public class Booking {
 				String destiny = textField.getText().toLowerCase();
 				String date = day.getSelectedItem() + "/" + month.getSelectedItem() + "/" + year.getSelectedItem();
 				int seats = Integer.parseInt(textField_2.getText());
-				try {
-					flights = controller.searchForFlight(origin,destiny,date,seats);
-				} catch (RemoteException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				flights = controller.searchForFlight(origin,destiny,date,seats);
 				listModel.clear();
 				for (int i = 0; i < flights.size(); i++)
 				{
