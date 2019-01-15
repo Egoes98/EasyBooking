@@ -4,7 +4,7 @@ import java.rmi.RemoteException;
 
 public interface IPaymentService {
 	
-	public boolean makePayment() throws RemoteException;
+	public boolean makePayment(String[] pData) throws RemoteException;
 	
 	
 }

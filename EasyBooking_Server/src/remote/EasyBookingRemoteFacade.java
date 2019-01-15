@@ -32,6 +32,7 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	AirlineService aiS;
 	PaymentService pS;
 	HashMap<String, User> account = new HashMap<String, User>();
+	User currentAccount;
 
 	public EasyBookingRemoteFacade(String ip, String port, String serverName, String AuthorizationName) throws RemoteException {
 		super();
@@ -60,7 +61,7 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 		payment[3] = "123";
 		account.put("alvaroh@opendeusto.es", new User("alvaroh@opendeusto.es", "Google+", payment));
 		payment[0] = "Paypal";
-		payment[1] = "Egoitz";
+		payment[1] = "Alvaro";
 		payment[2] = "12345";
 		account.put("alvarotest@opendeusto.es", new User("test@opendeusto.es", "Google+", payment));
 		
@@ -73,9 +74,16 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 
 	@Override
 	public List<FlightDTO> searchForFlight() throws RemoteException {
-		AirlineService.createGateway("Iberia",ip,port).searchFlight();
-		AirlineService.createGateway("Vueling",ip,port).searchFlight();
-		return  null;
+		List<FlightDTO> flights = new ArrayList<>();
+		List<FlightDTO> flightsb = new ArrayList<>();
+		
+		FlightAssembler a = new FlightAssembler();
+		
+		flights = a.assemble(AirlineService.createGateway("Iberia",ip,port).searchFlight());
+		flightsb = a.assemble(AirlineService.createGateway("Vueling",ip,port).searchFlight());
+		
+		flights.addAll(flightsb);
+		return  flights;
 	}
 	
 	public List<FlightDTO> getFlights(){
@@ -89,18 +97,29 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	//--------------------------------------------
 
 	@Override
-	public void bookFlight() throws RemoteException {
-		AirlineService.createGateway(" TODO Poner Airline pasada por variable",ip,port).bookFlight();
+	public boolean bookFlight() throws RemoteException {
+		if(makePayment()) {
+			notifyAirline();
+			currentAccount.makeReservation(new Reservation());
+			return true;
+		}else {
+			return false;
+		}
 	}
 
 	@Override
 	public boolean loginUser(String email,String password) throws RemoteException {
-		return AuthorizationService.createGateway(account.get(email).getAuthorization(),ip,port).loginUser(email, password);
+		if(AuthorizationService.createGateway(account.get(email).getAuthorization(),ip,port).loginUser(email, password)) {
+			currentAccount = account.get(email);
+			return true;
+		}
+		return false;
 	}
 
 	@Override
 	public boolean makePayment() throws RemoteException {
-		return PaymentService.createGateway("Meter lo por variable", ip, port).makePayment();
+		String method = currentAccount.getPaymentMethod();
+		return PaymentService.createGateway(method, ip, port).makePayment(currentAccount.getPData());
 	}
 
 	@Override
@@ -119,5 +138,9 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 			return false;
 		}
 
+	}
+	
+	public User getCurrentUser() {
+		return currentAccount;
 	}
 }

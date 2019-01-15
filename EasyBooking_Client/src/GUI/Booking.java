@@ -17,6 +17,8 @@ import javax.swing.JPopupMenu;
 import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Booking {
 
@@ -49,15 +51,11 @@ public class Booking {
 		frame.getContentPane().add(lblEasybooking);
 		
 		JList list = new JList();
-		list.setBounds(10, 121, 387, 117);
+		list.setBounds(10, 125, 414, 125);
 		frame.getContentPane().add(list);
 		
-		JLabel lblNewLabel = new JLabel("Results:");
-		lblNewLabel.setBounds(10, 106, 68, 14);
-		frame.getContentPane().add(lblNewLabel);
-		
 		JButton btnBook = new JButton("Book");
-		btnBook.setBounds(170, 238, 68, 23);
+		btnBook.setBounds(243, 91, 68, 23);
 		frame.getContentPane().add(btnBook);
 		
 		textField = new JTextField();
@@ -115,6 +113,14 @@ public class Booking {
 		JLabel lblPassengers = new JLabel("Passengers");
 		lblPassengers.setBounds(361, 50, 77, 14);
 		frame.getContentPane().add(lblPassengers);
+		
+		JButton btnSearch = new JButton("Search");
+		btnSearch.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnSearch.setBounds(119, 91, 89, 23);
+		frame.getContentPane().add(btnSearch);
 		
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {

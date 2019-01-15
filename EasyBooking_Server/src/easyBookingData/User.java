@@ -5,18 +5,13 @@ import java.util.List;
 
 public class User {
 
+	
 	private String email;
 	private String authorization_sys;
-	private Reservation reservation;
+	private List<Reservation> reservation;
 	
 	private String payment_method;
-	//Visa
-	private String name;
-	private String cardNumber;
-	private String cvv;
-	//Paypal
-	private String username;
-	private String password;
+	private String[] payData;
 	
 	private List<Reservation> res = new ArrayList<>();
 
@@ -24,14 +19,7 @@ public class User {
 		this.email = email;
 		this.authorization_sys = authorization_sys;
 		this.payment_method = payment[0];
-		if(payment_method.equals("Visa")) {
-			name = payment[1];
-			cardNumber = payment[2];
-			cvv = payment[3];
-		}else {
-			username = payment[1];
-			password = payment[2];
-		}
+		payData = payment;
 		
 	}
 	
@@ -43,11 +31,11 @@ public class User {
 		res.remove(reservation);
 	}
 	
-	public Reservation getReservation() {
+	public List<Reservation> getReservation() {
 		return reservation;
 	}
 
-	public void setReservation(Reservation reservation) {
+	public void setReservation(List<Reservation> reservation) {
 		this.reservation = reservation;
 	}
 
@@ -69,6 +57,8 @@ public class User {
 	public void setPaymentMethod(String payment_method) {
 		this.payment_method = payment_method;
 	}
-	
+	public String[] getPData() {
+		return payData;
+	}
 	
 }

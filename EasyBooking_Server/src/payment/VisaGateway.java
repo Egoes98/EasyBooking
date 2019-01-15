@@ -29,9 +29,8 @@ public class VisaGateway implements IPaymentService{
 	
 
 	@Override
-	public boolean makePayment() throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean makePayment(String[] pData) throws RemoteException {
+		return service.makePayment(pData);
 	}
 
 	

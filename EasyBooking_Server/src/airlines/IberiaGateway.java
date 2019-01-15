@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.rmi.RemoteException;
+import java.util.List;
+
+import easyBookingData.Flight;
 
 public class IberiaGateway implements IAirlineService{
 
@@ -16,7 +19,7 @@ public class IberiaGateway implements IAirlineService{
 	}
 	
 	@Override
-	public void searchFlight() throws RemoteException{
+	public List<Flight> searchFlight() throws RemoteException{
 		
 		//args[0] = Server IP
 		String serverIP = "0.0.0.0";
@@ -49,7 +52,9 @@ public class IberiaGateway implements IAirlineService{
 				System.err.println("# TCPSocketClient: EOF error: " + e.getMessage());
 			} catch (IOException e) {
 				System.err.println("# TCPSocketClient: IO error: " + e.getMessage());
-			}		
+			}
+		
+		return null;		
 
 	}
 

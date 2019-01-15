@@ -12,8 +12,6 @@ public class FlightAssembler {
 		for (Flight f : flights) {
 			flightsDTO.add(new FlightDTO(f.getFlight_number(), f.getAirline_code(), f.getDepartureTime(), f.getArrivalTime(), f.getSeats()));
 		}
-
-		System.out.println("* Assembling TV Programs ...");
 		
 		return flightsDTO;
 	}

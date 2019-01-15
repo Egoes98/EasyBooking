@@ -1,7 +1,9 @@
 package airlines;
 
 import java.rmi.RemoteException;
+import java.util.List;
 
+import easyBookingData.Flight;
 import remote.IAirlines;
 
 
@@ -28,8 +30,10 @@ private IAirlines service;
 	}
 
 	@Override
-	public void searchFlight() throws RemoteException {
-		service.searchFlight();
+	public List<Flight> searchFlight() throws RemoteException {
+		
+		
+		return service.searchFlight();
 		
 	}
 
