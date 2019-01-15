@@ -5,6 +5,7 @@ import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -19,6 +20,7 @@ import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.List;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -31,6 +33,7 @@ public class Booking {
 	private JTextField textField_2;
 	Controller controller;
 	List<FlightDTO> flights = new ArrayList<>();
+	DefaultListModel listModel = new DefaultListModel();
 	/**
 	 * Create the application.
 	 */
@@ -131,6 +134,12 @@ public class Booking {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				listModel.clear();
+				for (int i = 0; i < flights.size(); i++)
+				{
+				    listModel.addElement(flights.get(i));
+				}
+				list.setModel(listModel);
 			}
 		});
 		btnSearch.setBounds(119, 91, 89, 23);

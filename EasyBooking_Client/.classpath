@@ -5,6 +5,5 @@
 	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Client/lib/EasyBooking.jar"/>
 	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Client/lib/flightDTO.jar"/>
 	<classpathentry kind="con" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Client/bin"/>
-	<classpathentry kind="src" path="/EasyBooking_Server"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
