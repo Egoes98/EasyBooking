@@ -34,13 +34,15 @@ public class Booking {
 	Controller controller;
 	List<FlightDTO> flights = new ArrayList<>();
 	DefaultListModel listModel = new DefaultListModel();
+	Booked b;
 	/**
 	 * Create the application.
 	 */
-	public Booking(Controller controller) {
+	public Booking(Controller controller, Booked b) {
 		initialize();
 		frame.setVisible(true);
 		this.controller = controller;
+		this.b = b;
 	}
 
 	/**
@@ -62,6 +64,16 @@ public class Booking {
 		frame.getContentPane().add(list);
 		
 		JButton btnBook = new JButton("Book");
+		btnBook.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				FlightDTO f = (FlightDTO) list.getSelectedValue();
+				if(controller.bookFlight(f)) {
+					b.updateList();
+				}else {
+					System.out.println("Cant book");
+				}
+			}
+		});
 		btnBook.setBounds(243, 91, 68, 23);
 		frame.getContentPane().add(btnBook);
 		

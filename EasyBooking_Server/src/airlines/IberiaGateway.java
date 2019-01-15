@@ -33,9 +33,9 @@ public class IberiaGateway implements IAirlineService{
 				
 				//Send request (a String) to the server
 			
-				String ftext =  "search"+"#"+OriginAirpot+"#"+DestinyAirport+"#"+date+"#"+seats;
+				//String ftext =  origlan +"#"+newlan+"#"+ text;
 			
-				out.writeUTF(ftext);
+				out.writeUTF("search");
 				System.out.println(" - TCPSocketClient: Sent data to '" + tcpSocket.getInetAddress().getHostAddress() + ":" + tcpSocket.getPort() + "' ->" + "search" );
 				
 				//Read response (a String) from the server

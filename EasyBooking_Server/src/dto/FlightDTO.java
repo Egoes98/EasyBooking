@@ -4,6 +4,11 @@ import java.io.Serializable;
 
 public class FlightDTO implements Serializable{
 
+	@Override
+	public String toString() {
+		return flight_number + " " + departureTime + " " + arrivalTime + " " + origin + " " + destiny + " " + seats + " " + date;
+	}
+
 	int flight_number;
 	int airline_code;
 	String departureTime;

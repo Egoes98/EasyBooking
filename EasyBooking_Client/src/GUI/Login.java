@@ -97,8 +97,8 @@ public class Login {
 					e1.printStackTrace();
 				}
 				if(correct) {
-					new Booking(controller);
-					new Booked(controller);
+					Booked  b = new Booked(controller);
+					new Booking(controller, b);
 					frame.dispose();
 				}else {
 					System.out.println("Incorrect Account!!");

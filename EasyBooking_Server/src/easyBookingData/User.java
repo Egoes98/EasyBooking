@@ -3,17 +3,18 @@ package easyBookingData;
 import java.util.ArrayList;
 import java.util.List;
 
+import dto.FlightDTO;
+
 public class User {
 
 	
 	private String email;
 	private String authorization_sys;
-	private List<Reservation> reservation;
 	
 	private String payment_method;
 	private String[] payData;
 	
-	private List<Reservation> res = new ArrayList<>();
+	private List<FlightDTO> res = new ArrayList<>();
 
 	public User(String email, String authorization_sys, String[] payment) {
 		this.email = email;
@@ -23,20 +24,16 @@ public class User {
 		
 	}
 	
-	public void makeReservation(Reservation reservation) {
+	public void makeReservation(FlightDTO reservation) {
 		res.add(reservation);
 	}
 	
-	public void cancelReservation(Reservation reservation) {
-		res.remove(reservation);
+	public void cancelReservation(int index) {
+		this.res.remove(index);
 	}
 	
-	public List<Reservation> getReservation() {
-		return reservation;
-	}
-
-	public void setReservation(List<Reservation> reservation) {
-		this.reservation = reservation;
+	public List<FlightDTO> getReservation() {
+		return res;
 	}
 
 	public String getAuthorization() {
