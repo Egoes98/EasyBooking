@@ -51,7 +51,7 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 		payment[0] = "Paypal";
 		payment[1] = "Egoitz";
 		payment[2] = "12345";
-		account.put("test@opendeusto.es", new User("test@opendeusto.es", "Facebook", payment));
+		account.put("test@test.es", new User("test@opendeusto.es", "Facebook", payment));
 		
 		//Google Test Accounts
 		
@@ -109,10 +109,13 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 
 	@Override
 	public boolean loginUser(String email,String password) throws RemoteException {
-		if(AuthorizationService.createGateway(account.get(email).getAuthorization(),ip,port).loginUser(email, password)) {
-			currentAccount = account.get(email);
-			return true;
+		if(account.containsKey(email)) {
+			if(AuthorizationService.createGateway(account.get(email).getAuthorization(),ip,port).loginUser(email, password)) {
+				currentAccount = account.get(email);
+				return true;
+			}
 		}
+		System.out.println("Incorrect login.");
 		return false;
 	}
 

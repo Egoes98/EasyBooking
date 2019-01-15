@@ -10,7 +10,7 @@ public class FlightAssembler {
 		List<FlightDTO> flightsDTO = new ArrayList<>();
 
 		for (Flight f : flights) {
-			flightsDTO.add(new FlightDTO(f.getFlight_number(), f.getAirline_code(), f.getDepartureTime(), f.getArrivalTime(), f.getSeats()));
+			flightsDTO.add(new FlightDTO(f.getFlight_number(), f.getAirline_code(), f.getDepartureTime(), f.getArrivalTime(), f.getOrigin(), f.getDestiny, f.getSeats()));
 		}
 		
 		return flightsDTO;

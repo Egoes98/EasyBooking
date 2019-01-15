@@ -8,14 +8,18 @@ public class FlightDTO implements Serializable{
 	int airline_code;
 	String departureTime;
 	String arrivalTime;
+	String origin;
+	String destiny;
 	int seats;
 	
-	public FlightDTO(int flight_number, int airline_code, String departureTime, String arrivalTime, int seats) {
+	public FlightDTO(int flight_number, int airline_code, String departureTime, String arrivalTime,String destiny, String origin, int seats) {
 		this.flight_number = flight_number;
 		this.airline_code = airline_code;
 		this.departureTime = departureTime;
 		this.arrivalTime = arrivalTime;
 		this.seats = seats;
+		this.destiny = destiny;
+		this.origin = origin;
 	}
 
 	public int getFlight_number() {
@@ -58,4 +62,11 @@ public class FlightDTO implements Serializable{
 		this.seats = seats;
 	}
 	
+	public String getOrigin() {
+		return this.origin;
+	}
+	
+	public String getDestiny() {
+		return this.destiny;
+	}
 }

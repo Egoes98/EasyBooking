@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" output="bin" path="src"/>
-	<classpathentry kind="var" path="JRE_LIB" sourcepath="JRE_SRC"/>
+	<classpathentry kind="var" path="JRE_LIB" rootpath="JRE_SRCROOT" sourcepath="JRE_SRC"/>
+	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Server/lib/Airlines.jar"/>
+	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Server/lib/Authorization.jar"/>
+	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Server/lib/Payment.jar"/>
+	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Server/lib/datanucleus-api-jdo-5.1.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Server/lib/datanucleus-cache-5.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Server/lib/datanucleus-core-5.1.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Server/lib/datanucleus-rdbms-5.1.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Server/lib/javax.jdo-3.2.0-m8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Server/lib/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Server/lib/mysql-connector-java-8.0.12.jar"/>
 	<classpathentry kind="con" path="C:/Users/egoes/eclipse-workspace/EasyBooking_Server/bin"/>
-	<classpathentry exported="true" kind="lib" path="lib/Airlines.jar"/>
-	<classpathentry kind="lib" path="lib/Authorization.jar"/>
-	<classpathentry kind="lib" path="lib/Payment.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
