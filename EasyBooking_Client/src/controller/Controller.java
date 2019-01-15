@@ -33,7 +33,6 @@ public class Controller {
 		 * 
 		 */
 		
-		
 	}
 	
 	public List<FlightDTO> searchForFlight(String OriginAirpot, String DestinyAirport, String date, int seats){ 
@@ -43,7 +42,6 @@ public class Controller {
 			flights = rsl.getService().searchForFlight(OriginAirpot, DestinyAirport, date, seats);
 			for(FlightDTO f : flights) {
 				System.out.println(f.getFlight_number()+"#"+f.getAirline_code()+"#"+f.getDepartureTime()+"#"+f.getArrivalTime()+"#"+f.getOrigin()+"#"+f.getDestiny()+"#"+f.getSeats()+"#"+f.getDate());
-				
 			}
 		}catch (RemoteException e) {
 			e.printStackTrace();
@@ -53,9 +51,9 @@ public class Controller {
 	}
 	
   
-    public void bookFlight() throws RemoteException{
+    public boolean bookFlight(FlightDTO f) throws RemoteException{
     	IEasyBookingRemoteFacade a = rsl.getService();
-    	a.bookFlight();
+    	return a.bookFlight(f);
     }
     public boolean loginUser(String email, String password) throws RemoteException{
     	IEasyBookingRemoteFacade a = rsl.getService();
@@ -71,6 +69,8 @@ public class Controller {
     	a.registerUser(method,email,password,payment);
     }
     
+    
+    
     public void exit(){
     	System.exit(0);
     }
@@ -79,4 +79,5 @@ public class Controller {
     	new Controller(args);
     	
     }
+    
 }
