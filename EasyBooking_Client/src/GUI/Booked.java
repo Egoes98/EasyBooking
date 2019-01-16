@@ -55,8 +55,11 @@ public class Booked {
 		
 		JButton btnCancelFlight = new JButton("Cancel Flight");
 		btnCancelFlight.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				//controller.getCurrentUser().cancelReservation(list.getAnchorSelectionIndex());
+			try {
+				controller.cancelFlight(list.getAnchorSelectionIndex());
+			} catch (RemoteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		});
 		btnCancelFlight.setBounds(133, 56, 123, 23);
@@ -64,7 +67,12 @@ public class Booked {
 	}
 	
 	public void updateList() {
-		//this.flights = controller.getCurrentUser().getReservation();
+		try {
+			this.flights = controller.getReservation();
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		for (int i = 0; i < this.flights.size(); i++)
 		{
 		    listModel.addElement(this.flights.get(i));

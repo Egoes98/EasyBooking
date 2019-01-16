@@ -140,7 +140,15 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 
 	}
 	
-	public User getCurrentUser() throws RemoteException{
-		return currentAccount;
+	@Override
+	public void cancelFlight(int index) throws RemoteException {
+		currentAccount.cancelReservation(index);
 	}
+
+
+	@Override
+	public List<FlightDTO> getReservation() throws RemoteException {
+		return currentAccount.getReservation();
+	}
+	
 }
