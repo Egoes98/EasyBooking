@@ -12,8 +12,8 @@ public class PayPalGateway implements IPaymentService{
 		
 	}
 	
-	public void setService(String ip, String port, String GoogleName) {
-		String name = "//" + ip + ":" + port + "/" + GoogleName;
+	public void setService(String ip, String port, String PaypalName) {
+		String name = "//" + ip + ":" + port + "/" + PaypalName;
 		try {
 			service = (IPayment) java.rmi.Naming.lookup(name);
 		}catch (Exception e) {

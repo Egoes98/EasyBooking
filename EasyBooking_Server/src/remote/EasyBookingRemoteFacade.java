@@ -119,7 +119,8 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	@Override
 	public boolean makePayment() throws RemoteException {
 		String method = currentAccount.getPaymentMethod();
-		return PaymentService.createGateway(method, ip, port).makePayment(currentAccount.getPData());
+		String[] pData = currentAccount.getPData();
+		return PaymentService.createGateway(method, ip, port).makePayment(pData);
 	}
 
 	@Override
@@ -141,8 +142,8 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	}
 	
 	@Override
-	public void cancelFlight(int index) throws RemoteException {
-		currentAccount.cancelReservation(index);
+	public void cancelFlight(FlightDTO f) throws RemoteException {
+		currentAccount.cancelReservation(f);
 	}
 
 

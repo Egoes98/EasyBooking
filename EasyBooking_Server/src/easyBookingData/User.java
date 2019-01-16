@@ -28,8 +28,8 @@ public class User {
 		res.add(reservation);
 	}
 	
-	public void cancelReservation(int index) {
-		this.res.remove(index);
+	public void cancelReservation(FlightDTO f) {
+		this.res.remove(f);
 	}
 	
 	public List<FlightDTO> getReservation() {

@@ -77,9 +77,9 @@ public class Controller {
     	new Controller(args);
     }
 
-    public void cancelFlight(int index) throws RemoteException {
+    public void cancelFlight(FlightDTO f) throws RemoteException {
 	IEasyBookingRemoteFacade a = rsl.getService();
-    	a.cancelFlight(index);
+    	a.cancelFlight(f);
     }
 	
     public List<FlightDTO> getReservation() throws RemoteException {
