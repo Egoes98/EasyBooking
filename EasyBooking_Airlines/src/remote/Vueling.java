@@ -32,16 +32,15 @@ public class Vueling extends UnicastRemoteObject implements IAirlines{
 		System.out.println(OriginAirpot + " " + DestinyAirport +" "+ date + " " + seats);
 		
 		for(ServerFlightDTO f : flights) {
-			System.out.println(OriginAirpot + " " + DestinyAirport +" "+ date + " " + seats);
+			System.out.println("");
 			System.out.println(f.getFlight_number()+"#"+f.getAirline_code()+"#"+f.getDepartureTime()+"#"+f.getArrivalTime()+"#"+f.getOrigin()+"#"+f.getDestiny()+"#"+f.getSeats()+"#"+f.getDate());
-			
-			if(f.getOrigin().equals(OriginAirpot) && f.getDestiny().equals(DestinyAirport) && f.getSeats() <= seats && f.getDate().equals(date)) {
+			if(f.getOrigin().equals(OriginAirpot) && f.getDestiny().equals(DestinyAirport) && seats <= f.getSeats() && f.getDate().equals(date)) {
 				System.out.println("a");
 				System.out.println(f.getFlight_number()+"#"+f.getAirline_code()+"#"+f.getDepartureTime()+"#"+f.getArrivalTime()+"#"+f.getOrigin()+"#"+f.getDestiny()+"#"+f.getSeats()+"#"+f.getDate());
 				ret.add(f);
 			}
 		}
-		return flights;
+		return ret;
 		
 	}
 	@Override

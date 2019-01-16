@@ -82,13 +82,13 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 		System.out.println("Flights asked");
 		FlightAssembler a = new FlightAssembler();
 		
-		//flights = a.assemble(AirlineService.createGateway("Iberia",ip,port).searchFlight(OriginAirpot, DestinyAirport, date, seats));
+		flights = a.assemble(AirlineService.createGateway("Iberia",ip,port).searchFlight(OriginAirpot, DestinyAirport, date, seats));
 		flightsb = a.assemble( AirlineService.createGateway("Vueling",ip,port).searchFlight(OriginAirpot, DestinyAirport, date, seats));
 		
 		
 		
-		//flights.addAll(flightsb);
-		return  flightsb;
+		flights.addAll(flightsb);
+		return  flights;
 	}
 	
 	//--------------------------------------------
