@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 import java.awt.event.ActionEvent;
@@ -55,11 +56,14 @@ public class Booked {
 		
 		JButton btnCancelFlight = new JButton("Cancel Flight");
 		btnCancelFlight.addActionListener(new ActionListener() {
-			try {
-				controller.cancelFlight(list.getAnchorSelectionIndex());
-			} catch (RemoteException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+					controller.cancelFlight(list.getAnchorSelectionIndex());
+				} catch (RemoteException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				//controller.getCurrentUser().cancelReservation(list.getAnchorSelectionIndex());
 			}
 		});
 		btnCancelFlight.setBounds(133, 56, 123, 23);
@@ -67,12 +71,7 @@ public class Booked {
 	}
 	
 	public void updateList() {
-		try {
-			this.flights = controller.getReservation();
-		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		//this.flights = controller.getCurrentUser().getReservation();
 		for (int i = 0; i < this.flights.size(); i++)
 		{
 		    listModel.addElement(this.flights.get(i));

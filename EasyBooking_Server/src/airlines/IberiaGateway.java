@@ -10,6 +10,8 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
+import dto.FlightDTO;
+import dto.ServerFlightDTO;
 import easyBookingData.Flight;
 
 public class IberiaGateway implements IAirlineService{
@@ -20,7 +22,7 @@ public class IberiaGateway implements IAirlineService{
 	}
 	
 	@Override
-	public List<Flight> searchFlight(String OriginAirpot, String DestinyAirport, String date, int seats) throws RemoteException{
+	public List<ServerFlightDTO> searchFlight(String OriginAirpot, String DestinyAirport, String date, int seats) throws RemoteException{
 		
 		List<Flight> ret = new ArrayList<Flight>();
 		//args[0] = Server IP
@@ -61,7 +63,7 @@ public class IberiaGateway implements IAirlineService{
 				System.err.println("# TCPSocketClient: IO error: " + e.getMessage());
 			}
 		
-		return ret;		
+		return null;		
 
 	}
 

@@ -3,7 +3,7 @@ package airlines;
 import java.rmi.RemoteException;
 import java.util.List;
 
-import easyBookingData.Flight;
+import dto.ServerFlightDTO;
 import remote.IAirlines;
 
 
@@ -30,8 +30,7 @@ private IAirlines service;
 	}
 
 	@Override
-	public List<Flight> searchFlight(String OriginAirpot, String DestinyAirport, String date, int seats) throws RemoteException {
-		
+	public List<ServerFlightDTO> searchFlight(String OriginAirpot, String DestinyAirport, String date, int seats) throws RemoteException {
 		
 		return service.searchFlight(OriginAirpot, DestinyAirport, date, seats);
 		

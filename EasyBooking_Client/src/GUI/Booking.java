@@ -69,7 +69,7 @@ public class Booking {
 				FlightDTO f = (FlightDTO) list.getSelectedValue();
 				try {
 					if(controller.bookFlight(f)) {
-						b.updateList();
+						//b.updateList();
 					}else {
 						System.out.println("Cant book");
 					}

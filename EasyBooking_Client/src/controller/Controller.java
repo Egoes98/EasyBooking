@@ -32,6 +32,7 @@ public class Controller {
 		 * makePayment();
 		 * 
 		 */
+		
 	}
 	
 	public List<FlightDTO> searchForFlight(String OriginAirpot, String DestinyAirport, String date, int seats){ 
@@ -68,6 +69,15 @@ public class Controller {
     	a.registerUser(method,email,password,payment);
     }
     
+    public void cancelFlight(int index) throws RemoteException {
+    	IEasyBookingRemoteFacade a = rsl.getService();
+        	a.cancelFlight(index);
+        }
+    	
+    public List<FlightDTO> getReservation() throws RemoteException {
+    	IEasyBookingRemoteFacade a = rsl.getService();
+       	return a.getReservation();
+       }
     
     public void exit(){
     	System.exit(0);
@@ -75,16 +85,6 @@ public class Controller {
     
     public static void main(String[] args) throws RemoteException {    	
     	new Controller(args);
-    }
-
-    public void cancelFlight(int index) throws RemoteException {
-	IEasyBookingRemoteFacade a = rsl.getService();
-    	a.cancelFlight(index);
-    }
-	
-    public List<FlightDTO> getReservation() throws RemoteException {
-	IEasyBookingRemoteFacade a = rsl.getService();
-    	return a.getReservation();
     }
     
 }

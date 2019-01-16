@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 public class FlightDTO implements Serializable{
 
+	
+	private static final long serialVersionUID = 1L;
 	@Override
 	public String toString() {
 		return flight_number + " " + departureTime + " " + arrivalTime + " " + origin + " " + destiny + " " + seats + " " + date;
@@ -24,6 +26,7 @@ public class FlightDTO implements Serializable{
 		this.departureTime = departureTime;
 		this.arrivalTime = arrivalTime;
 		this.seats = seats;
+		this.origin = origin;
 		this.destiny = destiny;
 		this.seats = seats;
 		this.date = date;

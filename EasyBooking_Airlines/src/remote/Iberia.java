@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import data.Flight;
+import dto.ServerFlightDTO;
 
 public class Iberia extends Thread implements IAirlines{
 
@@ -20,8 +20,8 @@ public class Iberia extends Thread implements IAirlines{
 	private DataInputStream in;
 	private DataOutputStream out;
 	private Socket tcpSocket;
-	private List<Flight> sendFlight = new ArrayList<Flight>();
-	private List<Flight> flights = new ArrayList<Flight>();
+	private List<ServerFlightDTO> sendFlight = new ArrayList<ServerFlightDTO>();
+	private List<ServerFlightDTO> flights = new ArrayList<ServerFlightDTO>();
 	
 	public Iberia(Socket socket) {
 		try {
@@ -34,10 +34,10 @@ public class Iberia extends Thread implements IAirlines{
 		}
 		
 		flights = new ArrayList<>();
-		flights.add(new Flight(1, 2, "11:30", "13:00", "bilbao", "madrid", 30, "16/01/2019"));
-		flights.add(new Flight(2, 2, "16:30", "19:00", "bilbao", "madrid", 40, "16/01/2019"));
-		flights.add(new Flight(3, 2, "10:30", "13:00", "bilbao", "madrid", 2,  "17/01/2019"));
-		flights.add(new Flight(1, 2, "17:30", "20:00", "bilbao", "madrid", 50, "18/01/2019"));
+		flights.add(new ServerFlightDTO(1, 2, "11:30", "13:00", "bilbao", "madrid", 30, "16/01/2019"));
+		flights.add(new ServerFlightDTO(2, 2, "16:30", "19:00", "bilbao", "madrid", 40, "16/01/2019"));
+		flights.add(new ServerFlightDTO(3, 2, "10:30", "13:00", "bilbao", "madrid", 2,  "17/01/2019"));
+		flights.add(new ServerFlightDTO(1, 2, "17:30", "20:00", "bilbao", "madrid", 50, "18/01/2019"));
 	}
 	
 	public void run() {
@@ -52,7 +52,7 @@ public class Iberia extends Thread implements IAirlines{
 					
 					sendFlight = searchFlight(a[1], a[2], a[3],Integer.parseInt(a[4]));
 					String send = "";
-					for(Flight f : sendFlight) {
+					for(ServerFlightDTO f : sendFlight) {
 						send += f.getFlight_number()+"#"+f.getAirline_code()+"#"+f.getDepartureTime()+"#"+f.getArrivalTime()+"#"+f.getOrigin()+"#"+f.getDestiny()+"#"+f.getSeats()+"#"+f.getDate()+"-" ;
 					}
 					this.out.writeUTF(send);
@@ -75,11 +75,11 @@ public class Iberia extends Thread implements IAirlines{
 	}
 	
 	@Override
-	public List<Flight> searchFlight(String OriginAirpot, String DestinyAirport, String date, int seats) throws RemoteException {
+	public List<ServerFlightDTO> searchFlight(String OriginAirpot, String DestinyAirport, String date, int seats) throws RemoteException {
 		
-		List<Flight> ret = new ArrayList<>();
+		List<ServerFlightDTO> ret = new ArrayList<>();
 		
-		for(Flight f : flights) {
+		for(ServerFlightDTO f : flights) {
 			if(f.getOrigin().equals(OriginAirpot) && f.getDestiny().equals(DestinyAirport) && f.getSeats() <= seats && f.getDate().equals(date)) {
 				ret.add(f);
 			}

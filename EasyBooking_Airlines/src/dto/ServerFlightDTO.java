@@ -1,17 +1,30 @@
-package data;
+package dto;
 
-public class Flight {
+import java.io.Serializable;
+
+public class ServerFlightDTO implements Serializable {
 	
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public String toString() {
+		return flight_number + " " + departureTime + " " + arrivalTime + " " + origin + " " + destiny + " " + seats + " " + date;
+	}
+
 	int flight_number;
 	int airline_code;
 	String departureTime;
 	String arrivalTime;
-	int seats;
 	String origin;
 	String destiny;
+	int seats;
 	String date;
 	
-	public Flight(int flight_number, int airline_code, String departureTime, String arrivalTime, String origin, String destiny, int seats, String date) {
+	public ServerFlightDTO(int flight_number, int airline_code, String departureTime, String arrivalTime, String origin, String destiny, int seats, String date) {
 		this.flight_number = flight_number;
 		this.airline_code = airline_code;
 		this.departureTime = departureTime;
@@ -29,22 +42,6 @@ public class Flight {
 
 	public void setDate(String date) {
 		this.date = date;
-	}
-
-	public String getOrigin() {
-		return origin;
-	}
-
-	public void setOrigin(String origin) {
-		this.origin = origin;
-	}
-
-	public String getDestiny() {
-		return destiny;
-	}
-
-	public void setDestiny(String destiny) {
-		this.destiny = destiny;
 	}
 
 	public int getFlight_number() {
@@ -85,6 +82,14 @@ public class Flight {
 
 	public void setSeats(int seats) {
 		this.seats = seats;
+	}
+	
+	public String getOrigin() {
+		return this.origin;
+	}
+	
+	public String getDestiny() {
+		return this.destiny;
 	}
 
 }
