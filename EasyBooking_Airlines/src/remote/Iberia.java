@@ -45,17 +45,18 @@ public class Iberia extends Thread implements IAirlines{
 			try {
 				//Read request from the client
 				String data = this.in.readUTF();
-				System.out.println("   - EchoService - Received data from '" + tcpSocket.getInetAddress().getHostAddress() + ":" + tcpSocket.getPort() + "' -> '" + data + "'");							
+				System.out.println("Petition recieved from '" + tcpSocket.getInetAddress().getHostAddress() + ":" + tcpSocket.getPort() + "' -> '" + data + "'");							
 				
 				String[] a = data.split("#");
 				String send = "";
 				
 				if(a[0].equals("search")) {
-			
+					
+					System.out.println("");
 					sendFlightDTO = searchFlight(a[1], a[2], a[3], Integer.parseInt(a[4]));
 					
 					for(ServerFlightDTO f : sendFlightDTO) {
-						System.out.println(a + " " + f.getFlight_number()+"#"+f.getAirline_code()+"#"+f.getDepartureTime()+"#"+f.getArrivalTime()+"#"+f.getOrigin()+"#"+f.getDestiny()+"#"+f.getSeats()+"#"+f.getDate()+"-");
+						System.out.println(f.getFlight_number()+" "+f.getAirline_code()+" "+f.getDepartureTime()+" "+f.getArrivalTime()+" "+f.getOrigin()+" "+f.getDestiny()+" "+f.getSeats()+" "+f.getDate());
 						send += f.getFlight_number()+"#"+f.getAirline_code()+"#"+f.getDepartureTime()+"#"+f.getArrivalTime()+"#"+f.getOrigin()+"#"+f.getDestiny()+"#"+f.getSeats()+"#"+f.getDate()+"-" ;
 					}
 					System.out.println(send);
@@ -65,7 +66,7 @@ public class Iberia extends Thread implements IAirlines{
 				}
 					
 				this.out.writeUTF(send);
-				System.out.println("   - EchoService - Sent data to '" + tcpSocket.getInetAddress().getHostAddress() + ":" + tcpSocket.getPort() + "' -> '" + send + "'");
+				System.out.println("Flights gathered. Flight data sent to '" + tcpSocket.getInetAddress().getHostAddress() + ":" + tcpSocket.getPort() + "' -> '" + send + "'");
 			} catch (EOFException e) {
 				System.err.println("   # EchoService - TCPConnection EOF error" + e.getMessage());
 			} catch (IOException e) {

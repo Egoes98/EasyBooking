@@ -12,10 +12,10 @@ public enum AirlineService{
 		if(airline.equals("Vueling")) {
 			System.out.println("Vueling Connecion" + airline + ip + port);
 			VuelingGateway v = new VuelingGateway();
-			v.setService(ip, port, "Vueling");
+			v.setService(ip, port, airline);
 			return v;
 		}else{
-			IberiaGateway i = new IberiaGateway();
+			IberiaGateway i = new IberiaGateway(ip, port);
 			return i;
 		}
 	}

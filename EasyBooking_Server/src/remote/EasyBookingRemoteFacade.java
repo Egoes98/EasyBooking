@@ -18,10 +18,14 @@ import payment.VisaGateway;
 public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEasyBookingRemoteFacade {
 
 	private static final long serialVersionUID = 1L;
+	
 	private String ip;
 	private String port;
-	private String AuthorizationName;
+	private String AuthorizationName;;
+	private String Iport;
+	private String Iip;
 	private String serverName;
+	
 	private FacebookGateway Facebookservice = new FacebookGateway();
 	private GoogleGateway GoogleService = new GoogleGateway();
 	private VuelingGateway VuelingService = new VuelingGateway();
@@ -34,11 +38,13 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	HashMap<String, User> account = new HashMap<String, User>();
 	User currentAccount;
 
-	public EasyBookingRemoteFacade(String ip, String port, String serverName, String AuthorizationName) throws RemoteException {
+	public EasyBookingRemoteFacade(String ip, String port, String serverName, String AuthorizationName, String Iip, String Iport) throws RemoteException {
 		super();
 		this.serverName = serverName;
 		this.ip = ip;
 		this.port = port;
+		this.Iip = Iip;
+		this.Iport = Iport;		
 		
 		//Facebook Test Accounts
 		
@@ -77,12 +83,11 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 		List<FlightDTO> flights = new ArrayList<>();
 		List<FlightDTO> flightsb = new ArrayList<>();
 		
-		List<Flight> b = new ArrayList<>();
-		b.add(new Flight(1, 1, "11:30", "13:00", "bilbao", "madrid", 30, "16/01/2019"));
 		System.out.println("Flights asked");
+		
 		FlightAssembler a = new FlightAssembler();
 		
-		flights = a.assemble(AirlineService.createGateway("Iberia",ip,port).searchFlight(OriginAirpot, DestinyAirport, date, seats));
+		flights = a.assemble(AirlineService.createGateway("Iberia",Iip,Iport).searchFlight(OriginAirpot, DestinyAirport, date, seats));
 		flightsb = a.assemble( AirlineService.createGateway("Vueling",ip,port).searchFlight(OriginAirpot, DestinyAirport, date, seats));
 		
 		

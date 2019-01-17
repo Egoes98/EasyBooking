@@ -31,7 +31,7 @@ private IAirlines service;
 
 	@Override
 	public List<ServerFlightDTO> searchFlight(String OriginAirpot, String DestinyAirport, String date, int seats) throws RemoteException {
-		
+		System.out.println("Search petition at Vueling Server for Origin: "+ OriginAirpot + "Destiny: " + DestinyAirport + "Date: " + date + " Seats: "+ seats + "will be sent");
 		return service.searchFlight(OriginAirpot, DestinyAirport, date, seats);
 		
 	}

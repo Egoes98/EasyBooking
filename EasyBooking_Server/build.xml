@@ -8,7 +8,9 @@
 	<property name="classpath" location="bin"/>
 	<property name="export.file" value="EasyBooking.jar"/>
 	<property name="server.port" value="1099"/> 
+	<property name="Iserver.port" value="1100"/> 
 	<property name="server.IP" value="127.0.0.1"/> 
+	<property name="Iserver.IP" value="0.0.0.0"/>
 	<property name="server.Name1" value="Server"/>
 	<property name="server.Name2" value="Authorization"/>
 	<property name="policy.file" location="security/java.policy"/>	
@@ -44,6 +46,8 @@
 	 		<arg value="${server.port}"/> 
 			<arg value="${server.Name1}"/>
 			<arg value="${server.Name2}"/>
+			<arg value="${Iserver.IP}"/> 
+			<arg value="${Iserver.port}"/> 
         </java>
     </target>
 
