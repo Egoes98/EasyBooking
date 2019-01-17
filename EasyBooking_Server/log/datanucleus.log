@@ -1,0 +1,683 @@
+17-01-19_18:20:06 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Eliminación del esquema para clases
+17-01-19_18:20:06 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+17-01-19_18:20:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Airlines.jar
+17-01-19_18:20:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Authorization.jar
+17-01-19_18:20:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Payment.jar
+17-01-19_18:20:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-api-jdo-5.1.9.jar
+17-01-19_18:20:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+17-01-19_18:20:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-core-5.1.11.jar
+17-01-19_18:20:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-rdbms-5.1.11.jar
+17-01-19_18:20:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\javax.jdo-3.2.0-m8.jar
+17-01-19_18:20:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\log4j-1.2.14.jar
+17-01-19_18:20:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\mysql-connector-java-8.0.12.jar
+17-01-19_18:20:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin
+17-01-19_18:20:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\resources
+17-01-19_18:20:07 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\AirlineService.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IAirlineService.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IberiaGateway.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\VuelingGateway.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\AuthorizationService.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\FacebookGateway.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\GoogleGateway.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\IAuthorizationService.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\IUserDAO.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\UserDAO.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightAssembler.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightDTO.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\User.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\IPaymentService.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PayPalGateway.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PaymentService.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\VisaGateway.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\EasyBookingRemoteFacade.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\IEasyBookingRemoteFacade.class
+17-01-19_18:20:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\server\EasyBookingServer.class
+17-01-19_18:20:07 (main) ERROR [DataNucleus.Datastore] - Un error estaba tirado con DROP TABLE `USER` CASCADE : Unknown table 'accountsdb.user'
+java.sql.SQLSyntaxErrorException: Unknown table 'accountsdb.user'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatementList(AbstractTable.java:800)
+	at org.datanucleus.store.rdbms.table.AbstractTable.drop(AbstractTable.java:536)
+	at org.datanucleus.store.rdbms.DeleteTablesSchemaTransaction.run(DeleteTablesSchemaTransaction.java:218)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.deleteSchemaForClasses(RDBMSStoreManager.java:4282)
+	at org.datanucleus.store.schema.SchemaTool.deleteSchemaForClasses(SchemaTool.java:515)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:430)
+
+17-01-19_18:20:07 (main) ERROR [DataNucleus.Datastore.Schema] - Una excepcion estaba tirada durante la borracion de algunas class(es) : Unknown table 'accountsdb.user'
+java.sql.SQLSyntaxErrorException: Unknown table 'accountsdb.user'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatementList(AbstractTable.java:800)
+	at org.datanucleus.store.rdbms.table.AbstractTable.drop(AbstractTable.java:536)
+	at org.datanucleus.store.rdbms.DeleteTablesSchemaTransaction.run(DeleteTablesSchemaTransaction.java:218)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.deleteSchemaForClasses(RDBMSStoreManager.java:4282)
+	at org.datanucleus.store.schema.SchemaTool.deleteSchemaForClasses(SchemaTool.java:515)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:430)
+
+17-01-19_18:20:07 (main) ERROR [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha lanzado una excepción. Por favor consulte el Log para ver más detalles: Una excepcion estaba tirada durante la borracion de algunas class(es) : Unknown table 'accountsdb.user'
+java.sql.SQLSyntaxErrorException: Unknown table 'accountsdb.user'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatementList(AbstractTable.java:800)
+	at org.datanucleus.store.rdbms.table.AbstractTable.drop(AbstractTable.java:536)
+	at org.datanucleus.store.rdbms.DeleteTablesSchemaTransaction.run(DeleteTablesSchemaTransaction.java:218)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.deleteSchemaForClasses(RDBMSStoreManager.java:4282)
+	at org.datanucleus.store.schema.SchemaTool.deleteSchemaForClasses(SchemaTool.java:515)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:430)
+
+Una excepcion estaba tirada durante la borracion de algunas class(es) : Unknown table 'accountsdb.user'
+java.sql.SQLSyntaxErrorException: Unknown table 'accountsdb.user'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatementList(AbstractTable.java:800)
+	at org.datanucleus.store.rdbms.table.AbstractTable.drop(AbstractTable.java:536)
+	at org.datanucleus.store.rdbms.DeleteTablesSchemaTransaction.run(DeleteTablesSchemaTransaction.java:218)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.deleteSchemaForClasses(RDBMSStoreManager.java:4282)
+	at org.datanucleus.store.schema.SchemaTool.deleteSchemaForClasses(SchemaTool.java:515)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:430)
+
+org.datanucleus.exceptions.NucleusUserException: Una excepcion estaba tirada durante la borracion de algunas class(es) : Unknown table 'accountsdb.user'
+java.sql.SQLSyntaxErrorException: Unknown table 'accountsdb.user'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatementList(AbstractTable.java:800)
+	at org.datanucleus.store.rdbms.table.AbstractTable.drop(AbstractTable.java:536)
+	at org.datanucleus.store.rdbms.DeleteTablesSchemaTransaction.run(DeleteTablesSchemaTransaction.java:218)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.deleteSchemaForClasses(RDBMSStoreManager.java:4282)
+	at org.datanucleus.store.schema.SchemaTool.deleteSchemaForClasses(SchemaTool.java:515)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:430)
+
+	at org.datanucleus.store.rdbms.DeleteTablesSchemaTransaction.run(DeleteTablesSchemaTransaction.java:228)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.deleteSchemaForClasses(RDBMSStoreManager.java:4282)
+	at org.datanucleus.store.schema.SchemaTool.deleteSchemaForClasses(SchemaTool.java:515)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:430)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown table 'accountsdb.user'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatementList(AbstractTable.java:800)
+	at org.datanucleus.store.rdbms.table.AbstractTable.drop(AbstractTable.java:536)
+	at org.datanucleus.store.rdbms.DeleteTablesSchemaTransaction.run(DeleteTablesSchemaTransaction.java:218)
+	... 4 more
+Nested Throwables StackTrace:
+java.sql.SQLSyntaxErrorException: Unknown table 'accountsdb.user'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatementList(AbstractTable.java:800)
+	at org.datanucleus.store.rdbms.table.AbstractTable.drop(AbstractTable.java:536)
+	at org.datanucleus.store.rdbms.DeleteTablesSchemaTransaction.run(DeleteTablesSchemaTransaction.java:218)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.deleteSchemaForClasses(RDBMSStoreManager.java:4282)
+	at org.datanucleus.store.schema.SchemaTool.deleteSchemaForClasses(SchemaTool.java:515)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:430)
+17-01-19_18:20:44 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Eliminación del esquema para clases
+17-01-19_18:20:44 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+17-01-19_18:20:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Airlines.jar
+17-01-19_18:20:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Authorization.jar
+17-01-19_18:20:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Payment.jar
+17-01-19_18:20:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-api-jdo-5.1.9.jar
+17-01-19_18:20:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+17-01-19_18:20:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-core-5.1.11.jar
+17-01-19_18:20:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-rdbms-5.1.11.jar
+17-01-19_18:20:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\javax.jdo-3.2.0-m8.jar
+17-01-19_18:20:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\log4j-1.2.14.jar
+17-01-19_18:20:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\mysql-connector-java-8.0.12.jar
+17-01-19_18:20:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin
+17-01-19_18:20:44 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\resources
+17-01-19_18:20:46 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\AirlineService.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IAirlineService.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IberiaGateway.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\VuelingGateway.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\AuthorizationService.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\FacebookGateway.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\GoogleGateway.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\IAuthorizationService.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\IUserDAO.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\UserDAO.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightAssembler.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightDTO.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\User.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\IPaymentService.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PayPalGateway.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PaymentService.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\VisaGateway.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\EasyBookingRemoteFacade.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\IEasyBookingRemoteFacade.class
+17-01-19_18:20:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\server\EasyBookingServer.class
+17-01-19_18:20:46 (main) ERROR [DataNucleus.MetaData] - Encontro el Meta-Data de la clase easyBookingData.Reservation pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+org.datanucleus.exceptions.NucleusUserException: Encontro el Meta-Data de la clase easyBookingData.Reservation pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseClassMetaData(MetaDataManagerImpl.java:2758)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaData(MetaDataManagerImpl.java:2693)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaDataForUse(MetaDataManagerImpl.java:1367)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadClasses(MetaDataManagerImpl.java:643)
+	at org.datanucleus.metadata.MetaDataUtils.getFileMetaDataForInputFiles(MetaDataUtils.java:780)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:368)
+
+17-01-19_18:20:46 (main) ERROR [DataNucleus.MetaData] - Encontro el Meta-Data de la clase easyBookingData.User pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+org.datanucleus.exceptions.NucleusUserException: Encontro el Meta-Data de la clase easyBookingData.User pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseClassMetaData(MetaDataManagerImpl.java:2758)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaData(MetaDataManagerImpl.java:2693)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaDataForUse(MetaDataManagerImpl.java:1367)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadClasses(MetaDataManagerImpl.java:643)
+	at org.datanucleus.metadata.MetaDataUtils.getFileMetaDataForInputFiles(MetaDataUtils.java:780)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:368)
+
+17-01-19_18:20:46 (main) ERROR [DataNucleus.MetaData] - Encontro el Meta-Data de la clase easyBookingData.Flight pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+org.datanucleus.exceptions.NucleusUserException: Encontro el Meta-Data de la clase easyBookingData.Flight pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseClassMetaData(MetaDataManagerImpl.java:2758)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaData(MetaDataManagerImpl.java:2693)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaDataForUse(MetaDataManagerImpl.java:1367)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadClasses(MetaDataManagerImpl.java:643)
+	at org.datanucleus.metadata.MetaDataUtils.getFileMetaDataForInputFiles(MetaDataUtils.java:780)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:368)
+
+17-01-19_18:20:46 (main) ERROR [DataNucleus.MetaData] - Habia un error leyendo los ficheros. Por favor lee el LOG para obtener mas información. Lo siguiente puede ayudar : Hemos encontrado errores durante la inicialisación de MetaData. Compruebe por favor, las excepciones adjuntados
+Hemos encontrado errores durante la inicialisación de MetaData. Compruebe por favor, las excepciones adjuntados
+org.datanucleus.exceptions.NucleusUserException: Hemos encontrado errores durante la inicialisación de MetaData. Compruebe por favor, las excepciones adjuntados
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaDataForUse(MetaDataManagerImpl.java:1378)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadClasses(MetaDataManagerImpl.java:643)
+	at org.datanucleus.metadata.MetaDataUtils.getFileMetaDataForInputFiles(MetaDataUtils.java:780)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:368)
+Caused by: org.datanucleus.exceptions.NucleusUserException: Encontro el Meta-Data de la clase easyBookingData.User pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseClassMetaData(MetaDataManagerImpl.java:2758)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaData(MetaDataManagerImpl.java:2693)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaDataForUse(MetaDataManagerImpl.java:1367)
+	... 3 more
+Nested Throwables StackTrace:
+Encontro el Meta-Data de la clase easyBookingData.User pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+org.datanucleus.exceptions.NucleusUserException: Encontro el Meta-Data de la clase easyBookingData.User pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseClassMetaData(MetaDataManagerImpl.java:2758)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaData(MetaDataManagerImpl.java:2693)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaDataForUse(MetaDataManagerImpl.java:1367)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadClasses(MetaDataManagerImpl.java:643)
+	at org.datanucleus.metadata.MetaDataUtils.getFileMetaDataForInputFiles(MetaDataUtils.java:780)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:368)
+Encontro el Meta-Data de la clase easyBookingData.Reservation pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+org.datanucleus.exceptions.NucleusUserException: Encontro el Meta-Data de la clase easyBookingData.Reservation pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseClassMetaData(MetaDataManagerImpl.java:2758)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaData(MetaDataManagerImpl.java:2693)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaDataForUse(MetaDataManagerImpl.java:1367)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadClasses(MetaDataManagerImpl.java:643)
+	at org.datanucleus.metadata.MetaDataUtils.getFileMetaDataForInputFiles(MetaDataUtils.java:780)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:368)
+Encontro el Meta-Data de la clase easyBookingData.Flight pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+org.datanucleus.exceptions.NucleusUserException: Encontro el Meta-Data de la clase easyBookingData.Flight pero la clase no esta analizado! Por favor, debes analizar la clase antes de usar DataNucleus.
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseClassMetaData(MetaDataManagerImpl.java:2758)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaData(MetaDataManagerImpl.java:2693)
+	at org.datanucleus.metadata.MetaDataManagerImpl.initialiseFileMetaDataForUse(MetaDataManagerImpl.java:1367)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadClasses(MetaDataManagerImpl.java:643)
+	at org.datanucleus.metadata.MetaDataUtils.getFileMetaDataForInputFiles(MetaDataUtils.java:780)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:368)
+17-01-19_18:33:08 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.11) para el API "JDO" utilisando el JRE "{2}"
+17-01-19_18:33:08 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class" con definicion enhanced
+17-01-19_18:33:08 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class" con definicion enhanced
+17-01-19_18:33:08 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class" con definicion enhanced
+17-01-19_18:33:08 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\User.class" con definicion enhanced
+17-01-19_18:33:08 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases.
+17-01-19_18:33:08 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+17-01-19_18:33:08 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+17-01-19_18:33:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Airlines.jar
+17-01-19_18:33:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Authorization.jar
+17-01-19_18:33:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Payment.jar
+17-01-19_18:33:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-api-jdo-5.1.9.jar
+17-01-19_18:33:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+17-01-19_18:33:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-core-5.1.11.jar
+17-01-19_18:33:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-rdbms-5.1.11.jar
+17-01-19_18:33:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\javax.jdo-3.2.0-m8.jar
+17-01-19_18:33:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\log4j-1.2.14.jar
+17-01-19_18:33:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\mysql-connector-java-8.0.12.jar
+17-01-19_18:33:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin
+17-01-19_18:33:08 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\resources
+17-01-19_18:33:10 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\AirlineService.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IAirlineService.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IberiaGateway.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\VuelingGateway.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\AuthorizationService.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\FacebookGateway.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\GoogleGateway.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\IAuthorizationService.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\IUserDAO.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\UserDAO.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightAssembler.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightDTO.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\User.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\IPaymentService.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PayPalGateway.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PaymentService.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\VisaGateway.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\EasyBookingRemoteFacade.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\IEasyBookingRemoteFacade.class
+17-01-19_18:33:10 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\server\EasyBookingServer.class
+17-01-19_18:33:10 (main) ERROR [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha lanzado una excepción. Por favor consulte el Log para ver más detalles: La generación del nuevo tipo de Mapping org.datanucleus.store.rdbms.mapping.java.CollectionMapping ha fallada : Clase "easyBookingData.User" campo "res" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("easyBookingData.Reservation")!!
+Clase "easyBookingData.User" campo "res" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("easyBookingData.Reservation")!!
+org.datanucleus.exceptions.NucleusUserException: Clase "easyBookingData.User" campo "res" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("easyBookingData.Reservation")!!
+	at org.datanucleus.metadata.AbstractMemberMetaData.setRelation(AbstractMemberMetaData.java:2728)
+	at org.datanucleus.metadata.AbstractMemberMetaData.getRelatedMemberMetaData(AbstractMemberMetaData.java:2991)
+	at org.datanucleus.store.rdbms.identifier.DNIdentifierFactory.newTableIdentifier(DNIdentifierFactory.java:133)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addJoinTableForContainer(RDBMSStoreManager.java:3697)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.access$300(RDBMSStoreManager.java:2876)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.newJoinTable(RDBMSStoreManager.java:2846)
+	at org.datanucleus.store.rdbms.mapping.java.AbstractContainerMapping.initialize(AbstractContainerMapping.java:84)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:667)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageMembers(ClassTable.java:545)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageClass(ClassTable.java:451)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializeForClass(ClassTable.java:1277)
+	at org.datanucleus.store.rdbms.table.ClassTable.initialize(ClassTable.java:269)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.initializeClassTables(RDBMSStoreManager.java:3346)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2966)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3951)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:510)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:426)
+
+La generación del nuevo tipo de Mapping org.datanucleus.store.rdbms.mapping.java.CollectionMapping ha fallada : Clase "easyBookingData.User" campo "res" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("easyBookingData.Reservation")!!
+Clase "easyBookingData.User" campo "res" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("easyBookingData.Reservation")!!
+org.datanucleus.exceptions.NucleusUserException: Clase "easyBookingData.User" campo "res" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("easyBookingData.Reservation")!!
+	at org.datanucleus.metadata.AbstractMemberMetaData.setRelation(AbstractMemberMetaData.java:2728)
+	at org.datanucleus.metadata.AbstractMemberMetaData.getRelatedMemberMetaData(AbstractMemberMetaData.java:2991)
+	at org.datanucleus.store.rdbms.identifier.DNIdentifierFactory.newTableIdentifier(DNIdentifierFactory.java:133)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addJoinTableForContainer(RDBMSStoreManager.java:3697)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.access$300(RDBMSStoreManager.java:2876)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.newJoinTable(RDBMSStoreManager.java:2846)
+	at org.datanucleus.store.rdbms.mapping.java.AbstractContainerMapping.initialize(AbstractContainerMapping.java:84)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:667)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageMembers(ClassTable.java:545)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageClass(ClassTable.java:451)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializeForClass(ClassTable.java:1277)
+	at org.datanucleus.store.rdbms.table.ClassTable.initialize(ClassTable.java:269)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.initializeClassTables(RDBMSStoreManager.java:3346)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2966)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3951)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:510)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:426)
+
+org.datanucleus.exceptions.NucleusException: La generación del nuevo tipo de Mapping org.datanucleus.store.rdbms.mapping.java.CollectionMapping ha fallada : Clase "easyBookingData.User" campo "res" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("easyBookingData.Reservation")!!
+Clase "easyBookingData.User" campo "res" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("easyBookingData.Reservation")!!
+org.datanucleus.exceptions.NucleusUserException: Clase "easyBookingData.User" campo "res" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("easyBookingData.Reservation")!!
+	at org.datanucleus.metadata.AbstractMemberMetaData.setRelation(AbstractMemberMetaData.java:2728)
+	at org.datanucleus.metadata.AbstractMemberMetaData.getRelatedMemberMetaData(AbstractMemberMetaData.java:2991)
+	at org.datanucleus.store.rdbms.identifier.DNIdentifierFactory.newTableIdentifier(DNIdentifierFactory.java:133)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addJoinTableForContainer(RDBMSStoreManager.java:3697)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.access$300(RDBMSStoreManager.java:2876)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.newJoinTable(RDBMSStoreManager.java:2846)
+	at org.datanucleus.store.rdbms.mapping.java.AbstractContainerMapping.initialize(AbstractContainerMapping.java:84)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:667)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageMembers(ClassTable.java:545)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageClass(ClassTable.java:451)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializeForClass(ClassTable.java:1277)
+	at org.datanucleus.store.rdbms.table.ClassTable.initialize(ClassTable.java:269)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.initializeClassTables(RDBMSStoreManager.java:3346)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2966)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3951)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:510)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:426)
+
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:677)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageMembers(ClassTable.java:545)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageClass(ClassTable.java:451)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializeForClass(ClassTable.java:1277)
+	at org.datanucleus.store.rdbms.table.ClassTable.initialize(ClassTable.java:269)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.initializeClassTables(RDBMSStoreManager.java:3346)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2966)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3951)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:510)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:426)
+Caused by: org.datanucleus.exceptions.NucleusUserException: Clase "easyBookingData.User" campo "res" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("easyBookingData.Reservation")!!
+	at org.datanucleus.metadata.AbstractMemberMetaData.setRelation(AbstractMemberMetaData.java:2728)
+	at org.datanucleus.metadata.AbstractMemberMetaData.getRelatedMemberMetaData(AbstractMemberMetaData.java:2991)
+	at org.datanucleus.store.rdbms.identifier.DNIdentifierFactory.newTableIdentifier(DNIdentifierFactory.java:133)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addJoinTableForContainer(RDBMSStoreManager.java:3697)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.access$300(RDBMSStoreManager.java:2876)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.newJoinTable(RDBMSStoreManager.java:2846)
+	at org.datanucleus.store.rdbms.mapping.java.AbstractContainerMapping.initialize(AbstractContainerMapping.java:84)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:667)
+	... 10 more
+Nested Throwables StackTrace:
+Clase "easyBookingData.User" campo "res" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("easyBookingData.Reservation")!!
+org.datanucleus.exceptions.NucleusUserException: Clase "easyBookingData.User" campo "res" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("easyBookingData.Reservation")!!
+	at org.datanucleus.metadata.AbstractMemberMetaData.setRelation(AbstractMemberMetaData.java:2728)
+	at org.datanucleus.metadata.AbstractMemberMetaData.getRelatedMemberMetaData(AbstractMemberMetaData.java:2991)
+	at org.datanucleus.store.rdbms.identifier.DNIdentifierFactory.newTableIdentifier(DNIdentifierFactory.java:133)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addJoinTableForContainer(RDBMSStoreManager.java:3697)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.access$300(RDBMSStoreManager.java:2876)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.newJoinTable(RDBMSStoreManager.java:2846)
+	at org.datanucleus.store.rdbms.mapping.java.AbstractContainerMapping.initialize(AbstractContainerMapping.java:84)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:667)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageMembers(ClassTable.java:545)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageClass(ClassTable.java:451)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializeForClass(ClassTable.java:1277)
+	at org.datanucleus.store.rdbms.table.ClassTable.initialize(ClassTable.java:269)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.initializeClassTables(RDBMSStoreManager.java:3346)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2966)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3951)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:510)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:426)
+17-01-19_18:33:52 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.11) para el API "JDO" utilisando el JRE "{2}"
+17-01-19_18:33:53 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class" con definicion enhanced
+17-01-19_18:33:53 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class" con definicion enhanced
+17-01-19_18:33:53 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class" con definicion enhanced
+17-01-19_18:33:53 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\User.class" con definicion enhanced
+17-01-19_18:33:53 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases.
+17-01-19_18:33:53 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+17-01-19_18:33:53 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+17-01-19_18:33:53 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Airlines.jar
+17-01-19_18:33:53 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Authorization.jar
+17-01-19_18:33:53 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Payment.jar
+17-01-19_18:33:53 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-api-jdo-5.1.9.jar
+17-01-19_18:33:53 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+17-01-19_18:33:53 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-core-5.1.11.jar
+17-01-19_18:33:53 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-rdbms-5.1.11.jar
+17-01-19_18:33:53 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\javax.jdo-3.2.0-m8.jar
+17-01-19_18:33:53 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\log4j-1.2.14.jar
+17-01-19_18:33:53 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\mysql-connector-java-8.0.12.jar
+17-01-19_18:33:53 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin
+17-01-19_18:33:53 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\resources
+17-01-19_18:33:54 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\AirlineService.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IAirlineService.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IberiaGateway.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\VuelingGateway.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\AuthorizationService.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\FacebookGateway.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\GoogleGateway.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\IAuthorizationService.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\IUserDAO.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\UserDAO.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightAssembler.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightDTO.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\User.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\IPaymentService.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PayPalGateway.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PaymentService.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\VisaGateway.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\EasyBookingRemoteFacade.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\IEasyBookingRemoteFacade.class
+17-01-19_18:33:54 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\server\EasyBookingServer.class
+17-01-19_18:33:55 (main) ERROR [DataNucleus.Datastore] - Un error estaba tirado con ALTER TABLE `USER` ADD COLUMN `CVV` VARCHAR(255) BINARY NULL : Table 'accountsdb.user' doesn't exist
+java.sql.SQLSyntaxErrorException: Table 'accountsdb.user' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatementList(AbstractTable.java:800)
+	at org.datanucleus.store.rdbms.table.TableImpl.validateColumns(TableImpl.java:256)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.performTablesValidation(RDBMSStoreManager.java:3465)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2974)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3951)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:510)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:426)
+
+17-01-19_18:33:55 (main) ERROR [DataNucleus.Datastore] - Una excepcion estaba tirada durante la addicion/validacion de algunas class(es) : Table 'accountsdb.user' doesn't exist
+java.sql.SQLSyntaxErrorException: Table 'accountsdb.user' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatementList(AbstractTable.java:800)
+	at org.datanucleus.store.rdbms.table.TableImpl.validateColumns(TableImpl.java:256)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.performTablesValidation(RDBMSStoreManager.java:3465)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2974)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3951)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:510)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:426)
+
+17-01-19_18:33:55 (main) ERROR [DataNucleus.Datastore] - Una excepcion estaba tirada durante la addicion/validacion de algunas class(es) : Failed to open the referenced table 'user'
+java.sql.SQLException: Failed to open the referenced table 'user'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.TableImpl.createForeignKeys(TableImpl.java:516)
+	at org.datanucleus.store.rdbms.table.TableImpl.createConstraints(TableImpl.java:419)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.performTablesValidation(RDBMSStoreManager.java:3533)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2974)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3951)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:510)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:426)
+
+17-01-19_18:33:56 (main) ERROR [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha lanzado una excepción. Por favor consulte el Log para ver más detalles: Hemos encontrado unos errores durante la validación o creación de las tablas. Los errores estan en el log, y estan adjuntados a esta excepción.
+Hemos encontrado unos errores durante la validación o creación de las tablas. Los errores estan en el log, y estan adjuntados a esta excepción.
+org.datanucleus.exceptions.NucleusDataStoreException: Hemos encontrado unos errores durante la validación o creación de las tablas. Los errores estan en el log, y estan adjuntados a esta excepción.
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:3007)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3951)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:510)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:426)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'accountsdb.user' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatementList(AbstractTable.java:800)
+	at org.datanucleus.store.rdbms.table.TableImpl.validateColumns(TableImpl.java:256)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.performTablesValidation(RDBMSStoreManager.java:3465)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2974)
+	... 4 more
+Nested Throwables StackTrace:
+java.sql.SQLSyntaxErrorException: Table 'accountsdb.user' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatementList(AbstractTable.java:800)
+	at org.datanucleus.store.rdbms.table.TableImpl.validateColumns(TableImpl.java:256)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.performTablesValidation(RDBMSStoreManager.java:3465)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2974)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3951)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:510)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:426)
+java.sql.SQLException: Failed to open the referenced table 'user'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.TableImpl.createForeignKeys(TableImpl.java:516)
+	at org.datanucleus.store.rdbms.table.TableImpl.createConstraints(TableImpl.java:419)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.performTablesValidation(RDBMSStoreManager.java:3533)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2974)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3951)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:510)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:426)
+17-01-19_18:35:45 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.11) para el API "JDO" utilisando el JRE "{2}"
+17-01-19_18:35:46 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class" con definicion enhanced
+17-01-19_18:35:46 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class" con definicion enhanced
+17-01-19_18:35:46 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class" con definicion enhanced
+17-01-19_18:35:46 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\User.class" con definicion enhanced
+17-01-19_18:35:46 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases.
+17-01-19_18:35:46 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+17-01-19_18:35:46 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+17-01-19_18:35:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Airlines.jar
+17-01-19_18:35:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Authorization.jar
+17-01-19_18:35:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Payment.jar
+17-01-19_18:35:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-api-jdo-5.1.9.jar
+17-01-19_18:35:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+17-01-19_18:35:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-core-5.1.11.jar
+17-01-19_18:35:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-rdbms-5.1.11.jar
+17-01-19_18:35:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\javax.jdo-3.2.0-m8.jar
+17-01-19_18:35:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\log4j-1.2.14.jar
+17-01-19_18:35:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\mysql-connector-java-8.0.12.jar
+17-01-19_18:35:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin
+17-01-19_18:35:46 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\resources
+17-01-19_18:35:47 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\AirlineService.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IAirlineService.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IberiaGateway.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\VuelingGateway.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\AuthorizationService.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\FacebookGateway.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\GoogleGateway.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\IAuthorizationService.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\IUserDAO.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\UserDAO.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightAssembler.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightDTO.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\User.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\IPaymentService.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PayPalGateway.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PaymentService.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\VisaGateway.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\EasyBookingRemoteFacade.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\IEasyBookingRemoteFacade.class
+17-01-19_18:35:47 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\server\EasyBookingServer.class
+17-01-19_18:35:49 (main) ERROR [DataNucleus.Datastore] - Una excepcion estaba tirada durante la addicion/validacion de algunas class(es) : Failed to add the foreign key constraint. Missing index for constraint 'USER_RES_FK1' in the referenced table 'user'
+java.sql.SQLException: Failed to add the foreign key constraint. Missing index for constraint 'USER_RES_FK1' in the referenced table 'user'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.TableImpl.createForeignKeys(TableImpl.java:516)
+	at org.datanucleus.store.rdbms.table.TableImpl.createConstraints(TableImpl.java:419)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.performTablesValidation(RDBMSStoreManager.java:3533)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2974)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3951)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:510)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:426)
+
+17-01-19_18:35:49 (main) ERROR [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha lanzado una excepción. Por favor consulte el Log para ver más detalles: Hemos encontrado unos errores durante la validación o creación de las tablas. Los errores estan en el log, y estan adjuntados a esta excepción.
+Hemos encontrado unos errores durante la validación o creación de las tablas. Los errores estan en el log, y estan adjuntados a esta excepción.
+org.datanucleus.exceptions.NucleusDataStoreException: Hemos encontrado unos errores durante la validación o creación de las tablas. Los errores estan en el log, y estan adjuntados a esta excepción.
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:3007)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3951)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:510)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:426)
+Caused by: java.sql.SQLException: Failed to add the foreign key constraint. Missing index for constraint 'USER_RES_FK1' in the referenced table 'user'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.TableImpl.createForeignKeys(TableImpl.java:516)
+	at org.datanucleus.store.rdbms.table.TableImpl.createConstraints(TableImpl.java:419)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.performTablesValidation(RDBMSStoreManager.java:3533)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2974)
+	... 4 more
+Nested Throwables StackTrace:
+java.sql.SQLException: Failed to add the foreign key constraint. Missing index for constraint 'USER_RES_FK1' in the referenced table 'user'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:781)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:666)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.datasource.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:291)
+	at org.datanucleus.store.rdbms.table.AbstractTable.executeDdlStatement(AbstractTable.java:849)
+	at org.datanucleus.store.rdbms.table.TableImpl.createForeignKeys(TableImpl.java:516)
+	at org.datanucleus.store.rdbms.table.TableImpl.createConstraints(TableImpl.java:419)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.performTablesValidation(RDBMSStoreManager.java:3533)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:2974)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3951)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:510)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:426)

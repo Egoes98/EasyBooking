@@ -6,19 +6,21 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable(detachable = "true")
+@Inheritance(strategy=InheritanceStrategy.NEW_TABLE)
 public class Reservation {
 	
 	@Override
 	public String toString() {
 		return date + " " + price + " " + seats;
 	}
-	private User user;
-	private Flight flight;
 	@PrimaryKey
 	private int id;
+	
 	private String date;
 	private int price;
 	private int seats;
+	private User user;
+	private Flight flight;
 	
 	public Reservation(String date, int price, int seats) {
 		super();
