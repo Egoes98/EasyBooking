@@ -7,6 +7,7 @@ import javax.swing.JTextArea;
 
 import controller.Controller;
 import dto.FlightDTO;
+import easyBookingData.Reservation;
 
 import javax.swing.JList;
 import javax.swing.JLabel;
@@ -22,7 +23,7 @@ public class Booked {
 
 	private JFrame frame;
 	Controller controller;
-	List<FlightDTO> flights = new ArrayList<>();
+	List<Reservation> r = new ArrayList<>();
 	DefaultListModel listModel = new DefaultListModel();
 	JList list;
 
@@ -71,10 +72,15 @@ public class Booked {
 	}
 	
 	public void updateList() {
-		//this.flights = controller.getCurrentUser().getReservation();
-		for (int i = 0; i < this.flights.size(); i++)
+		try {
+			this.r = controller.getReservation();
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		for (int i = 0; i < this.r.size(); i++)
 		{
-		    listModel.addElement(this.flights.get(i));
+		    listModel.addElement(this.r.get(i));
 		}
 		list.setModel(listModel);
 	}

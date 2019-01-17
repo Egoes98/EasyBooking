@@ -8,6 +8,10 @@ import javax.jdo.annotations.PrimaryKey;
 @PersistenceCapable(detachable = "true")
 public class Reservation {
 	
+	@Override
+	public String toString() {
+		return date + " " + price + " " + seats;
+	}
 	private User user;
 	private Flight flight;
 	@PrimaryKey

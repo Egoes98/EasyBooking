@@ -9,6 +9,7 @@ import remote.IEasyBookingRemoteFacade;
 import serviceLocator.RMIServiceLocator;
 import GUI.*;
 import dto.FlightDTO;
+import easyBookingData.Reservation;
 
 
 public class Controller {
@@ -76,7 +77,7 @@ public class Controller {
         	a.cancelFlight(index);
         }
     	
-    public List<FlightDTO> getReservation() throws RemoteException {
+    public List<Reservation> getReservation() throws RemoteException {
     	IEasyBookingRemoteFacade a = rsl.getService();
        	return a.getReservation();
        }
