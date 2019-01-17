@@ -38,6 +38,8 @@ public class Controller {
 	public List<FlightDTO> searchForFlight(String OriginAirpot, String DestinyAirport, String date, int seats){ 
 		List<FlightDTO> flights = new ArrayList<>();
 		
+		System.out.println("Flights asked to EasyBooking Server!");
+		
 		try {
 			flights = rsl.getService().searchForFlight(OriginAirpot, DestinyAirport, date, seats);
 			for(FlightDTO f : flights) {

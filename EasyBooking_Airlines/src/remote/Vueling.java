@@ -28,20 +28,17 @@ public class Vueling extends UnicastRemoteObject implements IAirlines{
 
 	@Override
 	public List<ServerFlightDTO> searchFlight(String OriginAirpot, String DestinyAirport, String date, int seats) throws RemoteException {
+		
 		List<ServerFlightDTO> ret = new ArrayList<>();
 		System.out.println(OriginAirpot + " " + DestinyAirport +" "+ date + " " + seats);
 		
 		for(ServerFlightDTO f : flights) {
-			System.out.println(OriginAirpot + " " + DestinyAirport +" "+ date + " " + seats);
-			System.out.println(f.getFlight_number()+"#"+f.getAirline_code()+"#"+f.getDepartureTime()+"#"+f.getArrivalTime()+"#"+f.getOrigin()+"#"+f.getDestiny()+"#"+f.getSeats()+"#"+f.getDate());
-			
-			if(f.getOrigin().equals(OriginAirpot) && f.getDestiny().equals(DestinyAirport) && f.getSeats() <= seats && f.getDate().equals(date)) {
-				System.out.println("a");
+			if(f.getOrigin().equals(OriginAirpot) && f.getDestiny().equals(DestinyAirport) && seats <= f.getSeats() && f.getDate().equals(date)) {
 				System.out.println(f.getFlight_number()+"#"+f.getAirline_code()+"#"+f.getDepartureTime()+"#"+f.getArrivalTime()+"#"+f.getOrigin()+"#"+f.getDestiny()+"#"+f.getSeats()+"#"+f.getDate());
 				ret.add(f);
 			}
 		}
-		return flights;
+		return ret;
 		
 	}
 	@Override

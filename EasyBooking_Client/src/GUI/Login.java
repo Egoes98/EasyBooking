@@ -100,6 +100,7 @@ public class Login {
 					Booked  b = new Booked(controller);
 					new Booking(controller, b);
 					frame.dispose();
+					System.out.println("Correct Account!");
 				}else {
 					System.out.println("Incorrect Account!!");
 				}

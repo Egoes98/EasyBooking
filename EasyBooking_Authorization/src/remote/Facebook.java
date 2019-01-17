@@ -23,6 +23,7 @@ public class Facebook extends UnicastRemoteObject implements IAuthorization{
 		System.out.println(email + " " + password);
 		if(account.containsKey(email)) {
 			if(account.get(email).equals(password)) {
+				System.out.println("Correct Account!");
 				return true;
 			}else {
 				return false;
