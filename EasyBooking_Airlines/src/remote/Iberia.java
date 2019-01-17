@@ -34,10 +34,10 @@ public class Iberia extends Thread implements IAirlines{
 		}
 		
 		flights = new ArrayList<>();
-		flights.add(new ServerFlightDTO(5, 2, "11:30", "13:00", "bilbao", "madrid", 50, "16/01/2019"));
-		flights.add(new ServerFlightDTO(6, 2, "16:30", "19:00", "bilbao", "madrid", 40, "16/01/2019"));
-		flights.add(new ServerFlightDTO(7, 2, "10:30", "13:00", "bilbao", "madrid", 1,  "16/01/2019"));
-		flights.add(new ServerFlightDTO(8, 2, "17:30", "20:00", "bilbao", "madrid", 50, "16/01/2019"));
+		flights.add(new ServerFlightDTO(5, 2, "11:30", "13:00", "bilbao", "madrid", 50, "16/1/2019"));
+		flights.add(new ServerFlightDTO(6, 2, "16:30", "19:00", "bilbao", "madrid", 40, "16/1/2019"));
+		flights.add(new ServerFlightDTO(7, 2, "10:30", "13:00", "bilbao", "madrid", 1,  "16/1/2019"));
+		flights.add(new ServerFlightDTO(8, 2, "17:30", "20:00", "bilbao", "madrid", 50, "16/1/2019"));
 	}
 	
 	public void run() {
@@ -49,9 +49,12 @@ public class Iberia extends Thread implements IAirlines{
 				
 				String[] a = data.split("#");
 				String send = "";
+				
 				if(a[0].equals("search")) {
 			
-					for(ServerFlightDTO f : flights) {
+					sendFlightDTO = searchFlight(a[1], a[2], a[3], Integer.parseInt(a[4]));
+					
+					for(ServerFlightDTO f : sendFlightDTO) {
 						System.out.println(a + " " + f.getFlight_number()+"#"+f.getAirline_code()+"#"+f.getDepartureTime()+"#"+f.getArrivalTime()+"#"+f.getOrigin()+"#"+f.getDestiny()+"#"+f.getSeats()+"#"+f.getDate()+"-");
 						send += f.getFlight_number()+"#"+f.getAirline_code()+"#"+f.getDepartureTime()+"#"+f.getArrivalTime()+"#"+f.getOrigin()+"#"+f.getDestiny()+"#"+f.getSeats()+"#"+f.getDate()+"-" ;
 					}
@@ -83,7 +86,6 @@ public class Iberia extends Thread implements IAirlines{
 		
 		for(ServerFlightDTO f : flights) {
 			if(f.getOrigin().equals(OriginAirpot) && f.getDestiny().equals(DestinyAirport) && seats <= f.getSeats() && f.getDate().equals(date)) {
-				System.out.println(f.getFlight_number()+"#"+f.getAirline_code()+"#"+f.getDepartureTime()+"#"+f.getArrivalTime()+"#"+f.getOrigin()+"#"+f.getDestiny()+"#"+f.getSeats()+"#"+f.getDate()+"-");
 				ret.add(f);
 			}
 		}
