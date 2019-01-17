@@ -1,7 +1,25 @@
 package easyBookingData;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Inheritance;
+import javax.jdo.annotations.InheritanceStrategy;
+import javax.jdo.annotations.Persistent;
+
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Join;
+import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.PrimaryKey;
+
+import javax.jdo.annotations.Join;
+
+@PersistenceCapable(detachable = "true")
+@Inheritance(strategy=InheritanceStrategy.NEW_TABLE)
 public class Flight {
-	
+
+	@PrimaryKey
 	int flight_number;
 	int airline_code;
 	String departureTime;
@@ -10,6 +28,10 @@ public class Flight {
 	String origin;
 	String destiny;
 	String date;
+	
+	@Persistent(defaultFetchGroup="true", mappedBy="flight", dependentElement = "true")
+    @Join
+	private List<Reservation> flightReservations = new ArrayList<>();
 	
 	public Flight(int flight_number, int airline_code, String departureTime, String arrivalTime, String origin, String destiny, int seats, String date) {
 		this.flight_number = flight_number;

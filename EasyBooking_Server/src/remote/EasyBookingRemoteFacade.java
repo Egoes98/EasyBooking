@@ -8,6 +8,7 @@ import java.util.List;
 
 import airlines.*;
 import authorization.*;
+import dao.UserDAO;
 import dto.FlightAssembler;
 import dto.FlightDTO;
 import easyBookingData.*;
@@ -31,8 +32,8 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	AuthorizationService aS;
 	AirlineService aiS;
 	PaymentService pS;
-	HashMap<String, User> account = new HashMap<String, User>();
 	User currentAccount;
+	UserDAO uDAO = new UserDAO();
 
 	public EasyBookingRemoteFacade(String ip, String port, String serverName, String AuthorizationName) throws RemoteException {
 		super();
@@ -47,24 +48,22 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 		payment[1] = "Egoitz";
 		payment[2] = "12345";
 		payment[3] = "123";
-		account.put("egoitz.a.c@opendeusto.es", new User("egoitz.a.c@opendeusto.es", "Facebook", payment));
+		uDAO.createUser(new User("egoitz.a.c@opendeusto.es", "Facebook", payment));
 		payment[0] = "Paypal";
 		payment[1] = "Egoitz";
 		payment[2] = "12345";
-		account.put("test@test.es", new User("test@opendeusto.es", "Facebook", payment));
-		
+		uDAO.createUser(new User("test@opendeusto.es", "Facebook", payment));
 		//Google Test Accounts
 		
 		payment[0] = "Visa";
 		payment[1] = "Alvaro";
 		payment[2] = "12345";
 		payment[3] = "123";
-		account.put("alvaroh@opendeusto.es", new User("alvaroh@opendeusto.es", "Google+", payment));
+		uDAO.createUser(new User("alvaroh@opendeusto.es", "Google+", payment));
 		payment[0] = "Paypal";
 		payment[1] = "Alvaro";
 		payment[2] = "12345";
-		account.put("alvarotest@opendeusto.es", new User("test@opendeusto.es", "Google+", payment));
-		
+		uDAO.createUser(new User("test@opendeusto.es", "Google+", payment));
 		
 	}
 
@@ -97,7 +96,9 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	public boolean bookFlight(FlightDTO f) throws RemoteException {
 		if(makePayment()) {
 			notifyAirline();
-			currentAccount.makeReservation(f);
+			Reservation r = new Reservation(f.getDate(), f.getFlight_number(), f.getSeats());
+			currentAccount.makeReservation(r);
+			uDAO.updateUser(currentAccount);
 			return true;
 		}else {
 			return false;
@@ -106,11 +107,9 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 
 	@Override
 	public boolean loginUser(String email,String password) throws RemoteException {
-		if(account.containsKey(email)) {
-			if(AuthorizationService.createGateway(account.get(email).getAuthorization(),ip,port).loginUser(email, password)) {
-				currentAccount = account.get(email);
-				return true;
-			}
+		currentAccount = uDAO.getUser(email);
+		if(AuthorizationService.createGateway(currentAccount.getAuthorization(),ip,port).loginUser(email, password)) {
+			return true;
 		}
 		System.out.println("Incorrect login.");
 		return false;
@@ -131,7 +130,8 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	@Override
 	public boolean registerUser(String method,String email,String password, String[] payment) throws RemoteException {
 		if(AuthorizationService.createGateway(method,ip,port).loginUser(email, password)) {
-			account.put(email, new User(email, method, payment));
+			User u = new User(email, method, payment);
+			uDAO.createUser(u);
 			return true;
 		}else {
 			System.out.println(method + " Account doesnt exist");
@@ -143,11 +143,12 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	@Override
 	public void cancelFlight(int index) throws RemoteException {
 		currentAccount.cancelReservation(index);
+		uDAO.updateUser(currentAccount);
 	}
 
 
 	@Override
-	public List<FlightDTO> getReservation() throws RemoteException {
+	public List<Reservation> getReservation() throws RemoteException {
 		return currentAccount.getReservation();
 	}
 	

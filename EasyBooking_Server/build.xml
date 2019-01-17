@@ -11,7 +11,8 @@
 	<property name="server.IP" value="127.0.0.1"/> 
 	<property name="server.Name1" value="Server"/>
 	<property name="server.Name2" value="Authorization"/>
-	<property name="policy.file" location="security/java.policy"/>	
+	<property name="policy.file" location="security/java.policy"/>
+	<property name="resources.dir" location="resources"/>
 
 	<target name="help">
 		<echo>Usage: ant [build | export | server1 | server2 ]</echo>
@@ -21,7 +22,8 @@
 	        <fileset dir="${lib.dir}">
 		        <include name="**/*.jar"/>
 		    </fileset>
-			<pathelement location="${build.dir}"/>        
+			<pathelement location="${build.dir}"/>  
+			<pathelement location="${resources.dir}"/>
 	</path>
 		
 		<target name="build" description="Builds the project">
@@ -46,5 +48,60 @@
 			<arg value="${server.Name2}"/>
         </java>
     </target>
+	
+    <!-- TARGET : clean -->
+    <target name="clean">
+        <delete includeEmptyDirs="true" quiet="true">
+            <fileset dir="${build.dir}" includes="**/*.*"/>
+        </delete>
+		<delete dir="${build.dir}"/>
+    </target>
 
+    <!-- TARGET : prepare -->
+    <target name="prepare">
+        <mkdir dir="${build.dir}"/>
+    </target>
+
+    <!-- TARGET : compile -->
+    <target name="compile" depends="clean, prepare">
+        <javac srcdir="${source.dir}" destdir="${build.dir}" classpathref="full.classpath" includeantruntime="no">
+            <include name="**/*.java"/>
+        </javac>
+    </target>
+	
+    <!-- TARGET : enhance -->
+    <target name="enhance" depends="compile">
+    	<taskdef name="enhancer" classpathref="full.classpath" classname="org.datanucleus.enhancer.EnhancerTask" />
+    	
+   		<enhancer classpathref="full.classpath" failonerror="true">
+            <sysproperty key="log4j.configuration" value="file:${resources.dir}/log4j.properties"/>
+            <fileset dir="${build.dir}">
+                <include name="**/*.class"/>
+            </fileset>
+   		</enhancer>
+    </target>
+
+    <!-- TARGET : SchemaTool "create" -->
+    <target name="createschema" depends="enhance">
+        <taskdef name="schematool" classpathref="full.classpath" classname="org.datanucleus.store.schema.SchemaToolTask"/>
+
+        <schematool mode="create" classpathref="full.classpath" failonerror="true" props="datanucleus.properties">
+            <sysproperty key="log4j.configuration" value="file:${resources.dir}/log4j.properties"/>
+            <fileset dir="${build.dir}">
+                <include name="**/*.class"/>
+            </fileset>
+        </schematool>
+    </target>
+
+    <!-- TARGET : SchemaTool "delete" -->
+    <target name="deleteschema">
+        <taskdef name="schematool" classpathref="full.classpath" classname="org.datanucleus.store.schema.SchemaToolTask"/>
+
+    	<schematool mode="delete" classpathref="full.classpath" failonerror="true" props="datanucleus.properties">
+    		<sysproperty key="log4j.configuration" value="file:${resources.dir}/log4j.properties"/>
+        	<fileset dir="${build.dir}">
+                <include name="**/*.class"/>
+            </fileset>
+        </schematool>
+    </target>
 </project>

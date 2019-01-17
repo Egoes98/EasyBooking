@@ -1,7 +1,12 @@
 package easyBookingData;
 
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.PrimaryKey;
+
+@PersistenceCapable(detachable = "true")
 public class Airport {
 	
+	@PrimaryKey
 	private String code;
 	private String name;
 	private int commision;

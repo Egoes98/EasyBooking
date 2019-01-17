@@ -3,36 +3,66 @@ package easyBookingData;
 import java.util.ArrayList;
 import java.util.List;
 
-import dto.FlightDTO;
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Inheritance;
+import javax.jdo.annotations.InheritanceStrategy;
+import javax.jdo.annotations.Persistent;
 
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Join;
+import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.PrimaryKey;
+
+import javax.jdo.annotations.Join;
+
+@PersistenceCapable(detachable = "true")
+@Inheritance(strategy=InheritanceStrategy.NEW_TABLE)
 public class User {
 
-	
+	@PrimaryKey
 	private String email;
 	private String authorization_sys;
 	
 	private String payment_method;
-	private String[] payData;
 	
-	private List<FlightDTO> res = new ArrayList<>();
+	//Visa
+	private String name;
+	private String cardNumber;
+	private String cvv;
+	
+	//Paypal
+	private String username;
+	private String password;
+	
+	@Persistent(defaultFetchGroup="true", mappedBy="user", dependentElement = "true")
+    @Join
+	private List<Reservation> res = new ArrayList<>();
 
-	public User(String email, String authorization_sys, String[] payment) {
+	public User(String email, String authorization_sys, String[] p) {
+		
 		this.email = email;
 		this.authorization_sys = authorization_sys;
-		this.payment_method = payment[0];
-		payData = payment;
+		this.payment_method = p[0];
+		if(payment_method.equals("Paypal")) {
+			this.username=p[1];
+			this.password=p[2];
+		}else {
+			this.name=p[1];
+			this.cardNumber=p[2];
+			this.cvv=p[3];
+		}
 		
 	}
 	
-	public void makeReservation(FlightDTO reservation) {
-		res.add(reservation);
+	public void makeReservation(Reservation r) {
+		res.add(r);
 	}
 	
 	public void cancelReservation(int index) {
 		this.res.remove(index);
 	}
 	
-	public List<FlightDTO> getReservation() {
+	public List<Reservation> getReservation() {
 		return res;
 	}
 
@@ -55,7 +85,17 @@ public class User {
 		this.payment_method = payment_method;
 	}
 	public String[] getPData() {
-		return payData;
+		String[] p = new String[4];
+		p[0] = payment_method;
+		if(payment_method.equals("Paypal")) {
+			p[1] = username;
+			p[2] = password;
+		}else {
+			p[1] = name;
+			p[2] = cardNumber;
+			p[3] = cvv;
+		}
+		return p;
 	}
 	
 }

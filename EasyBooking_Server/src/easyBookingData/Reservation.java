@@ -1,13 +1,20 @@
 package easyBookingData;
 
+import javax.jdo.annotations.Inheritance;
+import javax.jdo.annotations.InheritanceStrategy;
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.PrimaryKey;
+
+@PersistenceCapable(detachable = "true")
 public class Reservation {
 	
-	
+	private User user;
+	private Flight flight;
+	@PrimaryKey
 	private int id;
 	private String date;
 	private int price;
 	private int seats;
-	
 	
 	public Reservation(String date, int price, int seats) {
 		super();

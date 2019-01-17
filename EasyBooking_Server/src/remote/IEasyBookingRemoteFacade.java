@@ -6,6 +6,7 @@ import java.util.List;
 
 import dto.FlightDTO;
 import easyBookingData.Flight;
+import easyBookingData.Reservation;
 import easyBookingData.User;
 
 public interface IEasyBookingRemoteFacade extends Remote {  
@@ -18,5 +19,5 @@ public interface IEasyBookingRemoteFacade extends Remote {
     public boolean registerUser(String method,String email,String password, String[] payment) throws RemoteException;
 	public boolean loginUser(String email, String password) throws RemoteException;
 	public void cancelFlight(int index) throws RemoteException;
-	public List<FlightDTO> getReservation() throws RemoteException;
+	public List<Reservation> getReservation() throws RemoteException;
  }
