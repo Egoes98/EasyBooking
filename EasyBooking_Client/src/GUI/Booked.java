@@ -7,6 +7,7 @@ import javax.swing.JTextArea;
 
 import controller.Controller;
 import dto.FlightDTO;
+import dto.ReservationDTO;
 import easyBookingData.Reservation;
 
 import javax.swing.JList;
@@ -23,7 +24,7 @@ public class Booked {
 
 	private JFrame frame;
 	Controller controller;
-	List<Reservation> r = new ArrayList<>();
+	List<ReservationDTO> r = new ArrayList<>();
 	DefaultListModel listModel = new DefaultListModel();
 	JList list;
 

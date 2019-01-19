@@ -11,6 +11,7 @@ import authorization.*;
 import dao.UserDAO;
 import dto.FlightAssembler;
 import dto.FlightDTO;
+import dto.ReservationDTO;
 import easyBookingData.*;
 import payment.PayPalGateway;
 import payment.PaymentService;
@@ -153,8 +154,9 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 
 
 	@Override
-	public List<Reservation> getReservation() throws RemoteException {
-		return currentAccount.getReservation();
+	public List<ReservationDTO> getReservation() throws RemoteException {
+		FlightAssembler fa = new FlightAssembler();
+		return fa.assembleR(currentAccount.getReservation());
 	}
 	
 }

@@ -3,6 +3,7 @@ package dto;
 import java.util.*;
 
 import easyBookingData.Flight;
+import easyBookingData.Reservation;
 
 public class FlightAssembler {
 	
@@ -15,6 +16,16 @@ public class FlightAssembler {
 		}
 		
 		return flightsDTO;
+	}
+	
+	public List<ReservationDTO> assembleR(List<Reservation> r){
+		List<ReservationDTO> rDTO = new ArrayList<>();
+		
+		for(Reservation res : r) {
+			res.toString();
+			rDTO.add(new ReservationDTO(res.getDate(), res.getPrice(), res.getSeats()));
+		}
+		return rDTO;
 	}
 
 }
