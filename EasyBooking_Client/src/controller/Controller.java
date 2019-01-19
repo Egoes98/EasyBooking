@@ -10,7 +10,6 @@ import serviceLocator.RMIServiceLocator;
 import GUI.*;
 import dto.FlightDTO;
 import dto.ReservationDTO;
-import easyBookingData.Reservation;
 
 
 public class Controller {

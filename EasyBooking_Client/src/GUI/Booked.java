@@ -8,7 +8,6 @@ import javax.swing.JTextArea;
 import controller.Controller;
 import dto.FlightDTO;
 import dto.ReservationDTO;
-import easyBookingData.Reservation;
 
 import javax.swing.JList;
 import javax.swing.JLabel;
