@@ -90,7 +90,10 @@ public class Iberia extends Thread implements IAirlines{
 				ret.add(f);
 			}
 		}
-		if(ret.size() == 0) ret.add(new ServerFlightDTO(9, 2, "No results.", "", "", "", 0, ""));
+		if(ret.isEmpty()) {
+			System.out.println("No result");
+			ret.add(new ServerFlightDTO(9, 2, "No results.", "", "", "", 0, ""));
+		}
 		return ret;
 	}
 	

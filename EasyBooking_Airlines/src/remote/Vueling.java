@@ -28,6 +28,7 @@ public class Vueling extends UnicastRemoteObject implements IAirlines{
 
 	@Override
 	public List<ServerFlightDTO> searchFlight(String OriginAirpot, String DestinyAirport, String date, int seats) throws RemoteException {
+		System.out.println("HOlA");
 		
 		List<ServerFlightDTO> ret = new ArrayList<>();
 		System.out.println(OriginAirpot + " " + DestinyAirport +" "+ date + " " + seats);
@@ -38,7 +39,10 @@ public class Vueling extends UnicastRemoteObject implements IAirlines{
 				ret.add(f);
 			}
 		}
-		if(ret.size() == 0) ret.add(new ServerFlightDTO(10, 1, "No results.", "", "", "", 0, ""));
+		if(ret.isEmpty()) {
+			System.out.println("No results");
+			ret.add(new ServerFlightDTO(10, 1, "No results.", "", "", "", 0, ""));
+		}
 		return ret;
 		
 	}

@@ -147,7 +147,7 @@ public class Booking {
 				int seats = Integer.parseInt(textField_2.getText());
 				flights = controller.searchForFlight(origin,destiny,date,seats);
 				
-				if(flights == null) {
+				if(flights.isEmpty()) {
 					listModel.clear();
 					list.setModel(listModel);
 					System.out.println("No results");
