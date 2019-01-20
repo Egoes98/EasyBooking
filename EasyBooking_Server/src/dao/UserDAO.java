@@ -22,24 +22,6 @@ public class UserDAO implements IUserDAO{
 	}
 
 	@Override
-	public void makeReservation(Reservation r) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public List<Reservation> getReservation() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getAuthorization() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public User getUser(String email) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(2);

@@ -114,6 +114,9 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 	@Override
 	public boolean loginUser(String email,String password) throws RemoteException {
 		currentAccount = uDAO.getUser(email);
+		if(currentAccount == null) {
+			return false;
+		}
 		if(AuthorizationService.createGateway(currentAccount.getAuthorization(),ip,port).loginUser(email, password)) {
 			return true;
 		}
