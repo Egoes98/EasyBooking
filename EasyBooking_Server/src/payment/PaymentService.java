@@ -14,7 +14,7 @@ public enum PaymentService{
 			return v;
 		}else {
 			PayPalGateway p = new PayPalGateway();
-			p.setService(ip, port, "Paypal");
+			p.setService(ip, port, "PayPal");
 			return p;
 		}
 	}

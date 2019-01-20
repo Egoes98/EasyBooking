@@ -13,8 +13,8 @@ public class Google extends UnicastRemoteObject implements IAuthorization{
 	public Google(String serverName) throws RemoteException {
 		
 		this.serverName = serverName;
-		account.put("egoitz.a.c@opendeusto.es", "123");
-		account.put("test@test.es", "test");
+		account.put("alvaroh@opendeusto.es", "123");
+		account.put("alvaro@test.es", "test");
 	}
 	
 	public boolean loginUser(String email,String password) throws RemoteException {

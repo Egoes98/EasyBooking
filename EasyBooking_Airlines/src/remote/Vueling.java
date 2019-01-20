@@ -38,6 +38,7 @@ public class Vueling extends UnicastRemoteObject implements IAirlines{
 				ret.add(f);
 			}
 		}
+		if(ret.size() == 0) ret.add(new ServerFlightDTO(10, 1, "No results.", "", "", "", 0, ""));
 		return ret;
 		
 	}

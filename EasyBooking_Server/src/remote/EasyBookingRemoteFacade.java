@@ -59,7 +59,8 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 		payment[0] = "Paypal";
 		payment[1] = "Egoitz";
 		payment[2] = "12345";
-		uDAO.createUser(new User("test@opendeusto.es", "Facebook", payment));
+		uDAO.createUser(new User("test@test.es", "Facebook", payment));
+		currentAccount = new User("test@test.es", "Facebook", payment);
 		//Google Test Accounts
 		
 		payment[0] = "Visa";
@@ -70,7 +71,7 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 		payment[0] = "Paypal";
 		payment[1] = "Alvaro";
 		payment[2] = "12345";
-		uDAO.createUser(new User("test@opendeusto.es", "Google+", payment));
+		uDAO.createUser(new User("alvaro@test.es", "Google+", payment));
 		
 	}
 
@@ -90,8 +91,6 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 		flights = a.assemble(AirlineService.createGateway("Iberia",Iip,Iport).searchFlight(OriginAirpot, DestinyAirport, date, seats));
 		flightsb = a.assemble( AirlineService.createGateway("Vueling",ip,port).searchFlight(OriginAirpot, DestinyAirport, date, seats));
 		
-		
-		
 		flights.addAll(flightsb);
 		return  flights;
 	}
@@ -107,13 +106,14 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 			uDAO.updateUser(currentAccount);
 			return true;
 		}else {
+			System.out.println("Payment could not be done!");
 			return false;
 		}
 	}
 
 	@Override
 	public boolean loginUser(String email,String password) throws RemoteException {
-		currentAccount = uDAO.getUser(email);
+		//currentAccount = uDAO.getUser(email);
 		if(currentAccount == null) {
 			return false;
 		}

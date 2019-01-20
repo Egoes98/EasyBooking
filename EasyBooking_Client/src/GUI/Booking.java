@@ -146,6 +146,13 @@ public class Booking {
 				String date = day.getSelectedItem() + "/" + month.getSelectedItem() + "/" + year.getSelectedItem();
 				int seats = Integer.parseInt(textField_2.getText());
 				flights = controller.searchForFlight(origin,destiny,date,seats);
+				
+				if(flights == null) {
+					listModel.clear();
+					list.setModel(listModel);
+					System.out.println("No results");
+					return;
+				}
 				listModel.clear();
 				for (int i = 0; i < flights.size(); i++)
 				{
