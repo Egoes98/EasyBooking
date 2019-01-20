@@ -2186,3 +2186,252 @@ java.sql.SQLException: Access denied for user 'sd'@'localhost' (using password: 
 	at server.EasyBookingServer.main(Unknown Source)
 20-01-19_16:22:19 (main) ERROR [DataNucleus.Datastore] - Exception thrown creating StoreManager : Access denied for user 'sd'@'localhost' (using password: YES)
 20-01-19_16:25:13 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_16:59:30 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_17:02:07 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.11) para el API "JDO" utilisando el JRE "{2}"
+20-01-19_17:02:07 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class" con definicion enhanced
+20-01-19_17:02:07 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class" con definicion enhanced
+20-01-19_17:02:07 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class" con definicion enhanced
+20-01-19_17:02:07 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\User.class" con definicion enhanced
+20-01-19_17:02:07 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases.
+20-01-19_17:02:07 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+20-01-19_17:02:07 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+20-01-19_17:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Airlines.jar
+20-01-19_17:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Authorization.jar
+20-01-19_17:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Payment.jar
+20-01-19_17:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-api-jdo-5.1.9.jar
+20-01-19_17:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+20-01-19_17:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-core-5.1.11.jar
+20-01-19_17:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-rdbms-5.1.11.jar
+20-01-19_17:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\javax.jdo-3.2.0-m8.jar
+20-01-19_17:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\log4j-1.2.14.jar
+20-01-19_17:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\mysql-connector-java-8.0.12.jar
+20-01-19_17:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin
+20-01-19_17:02:07 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\resources
+20-01-19_17:02:09 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\AirlineService.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IAirlineService.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IberiaGateway.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\VuelingGateway.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\AuthorizationService.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\FacebookGateway.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\GoogleGateway.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\IAuthorizationService.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\IUserDAO.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\UserDAO.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightAssembler.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightDTO.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\ReservationDTO.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\User.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\IPaymentService.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PayPalGateway.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PaymentService.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\VisaGateway.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\EasyBookingRemoteFacade.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\IEasyBookingRemoteFacade.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\server\EasyBookingServer.class
+20-01-19_17:02:09 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+20-01-19_17:02:11 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_17:06:48 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.11) para el API "JDO" utilisando el JRE "{2}"
+20-01-19_17:06:48 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class" con definicion enhanced
+20-01-19_17:06:48 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class" con definicion enhanced
+20-01-19_17:06:48 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class" con definicion enhanced
+20-01-19_17:06:48 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\User.class" con definicion enhanced
+20-01-19_17:06:48 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases.
+20-01-19_17:06:49 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+20-01-19_17:06:49 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+20-01-19_17:06:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Airlines.jar
+20-01-19_17:06:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Authorization.jar
+20-01-19_17:06:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Payment.jar
+20-01-19_17:06:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-api-jdo-5.1.9.jar
+20-01-19_17:06:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+20-01-19_17:06:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-core-5.1.11.jar
+20-01-19_17:06:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-rdbms-5.1.11.jar
+20-01-19_17:06:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\javax.jdo-3.2.0-m8.jar
+20-01-19_17:06:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\log4j-1.2.14.jar
+20-01-19_17:06:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\mysql-connector-java-8.0.12.jar
+20-01-19_17:06:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin
+20-01-19_17:06:49 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\resources
+20-01-19_17:06:50 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\AirlineService.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IAirlineService.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IberiaGateway.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\VuelingGateway.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\AuthorizationService.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\FacebookGateway.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\GoogleGateway.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\IAuthorizationService.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\IUserDAO.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\UserDAO.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightAssembler.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightDTO.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\ReservationDTO.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\User.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\IPaymentService.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PayPalGateway.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PaymentService.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\VisaGateway.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\EasyBookingRemoteFacade.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\IEasyBookingRemoteFacade.class
+20-01-19_17:06:50 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\server\EasyBookingServer.class
+20-01-19_17:06:51 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+20-01-19_17:06:52 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_17:06:53 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@2a693f59" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'egoitz.a.c@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:06:53 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@7de62196" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'test@test.es' for key 'PRIMARY'
+20-01-19_17:06:53 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@6ca18a14" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaroh@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:06:53 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@77659b30" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaro@test.es' for key 'PRIMARY'
+20-01-19_17:08:03 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_17:08:03 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@2a693f59" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'egoitz.a.c@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:08:03 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@7de62196" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'test@test.es' for key 'PRIMARY'
+20-01-19_17:08:03 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@6ca18a14" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaroh@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:08:03 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@77659b30" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaro@test.es' for key 'PRIMARY'
+20-01-19_17:12:35 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_17:12:35 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@2a693f59" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'egoitz.a.c@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:12:35 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@7de62196" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'test@test.es' for key 'PRIMARY'
+20-01-19_17:12:35 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@6ca18a14" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaroh@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:12:35 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@77659b30" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaro@test.es' for key 'PRIMARY'
+20-01-19_17:14:22 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_17:14:22 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@2a693f59" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'egoitz.a.c@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:14:22 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@7de62196" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'test@test.es' for key 'PRIMARY'
+20-01-19_17:14:22 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@6ca18a14" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaroh@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:14:22 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@77659b30" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaro@test.es' for key 'PRIMARY'
+20-01-19_17:17:55 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_17:17:55 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@2a693f59" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'egoitz.a.c@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:17:55 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@7de62196" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'test@test.es' for key 'PRIMARY'
+20-01-19_17:17:55 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@6ca18a14" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaroh@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:17:55 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@77659b30" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaro@test.es' for key 'PRIMARY'
+20-01-19_17:24:11 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_17:24:12 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@2a693f59" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'egoitz.a.c@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:24:12 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@7de62196" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'test@test.es' for key 'PRIMARY'
+20-01-19_17:24:12 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@6ca18a14" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaroh@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:24:12 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@77659b30" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaro@test.es' for key 'PRIMARY'
+20-01-19_17:28:04 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.11) para el API "JDO" utilisando el JRE "{2}"
+20-01-19_17:28:04 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class" con definicion enhanced
+20-01-19_17:28:04 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class" con definicion enhanced
+20-01-19_17:28:04 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class" con definicion enhanced
+20-01-19_17:28:04 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\User.class" con definicion enhanced
+20-01-19_17:28:04 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases.
+20-01-19_17:28:04 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+20-01-19_17:28:04 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+20-01-19_17:28:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Airlines.jar
+20-01-19_17:28:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Authorization.jar
+20-01-19_17:28:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Payment.jar
+20-01-19_17:28:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-api-jdo-5.1.9.jar
+20-01-19_17:28:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+20-01-19_17:28:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-core-5.1.11.jar
+20-01-19_17:28:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-rdbms-5.1.11.jar
+20-01-19_17:28:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\javax.jdo-3.2.0-m8.jar
+20-01-19_17:28:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\log4j-1.2.14.jar
+20-01-19_17:28:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\mysql-connector-java-8.0.12.jar
+20-01-19_17:28:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin
+20-01-19_17:28:04 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\resources
+20-01-19_17:28:06 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\AirlineService.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IAirlineService.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IberiaGateway.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\VuelingGateway.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\AuthorizationService.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\FacebookGateway.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\GoogleGateway.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\IAuthorizationService.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\IUserDAO.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\UserDAO.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightAssembler.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightDTO.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\ReservationDTO.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\User.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\IPaymentService.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PayPalGateway.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PaymentService.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\VisaGateway.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\EasyBookingRemoteFacade.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\IEasyBookingRemoteFacade.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\server\EasyBookingServer.class
+20-01-19_17:28:06 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+20-01-19_17:28:20 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_17:28:20 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@2a693f59" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'egoitz.a.c@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:28:20 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@7de62196" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'test@test.es' for key 'PRIMARY'
+20-01-19_17:28:20 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@6ca18a14" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaroh@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:28:20 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@77659b30" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaro@test.es' for key 'PRIMARY'
+20-01-19_17:33:06 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_17:33:50 (RMI TCP Connection(2)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:33:58 (RMI TCP Connection(2)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:34:22 (RMI TCP Connection(2)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:35:02 (RMI TCP Connection(3)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:35:02 (RMI TCP Connection(3)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:35:03 (RMI TCP Connection(3)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:35:03 (RMI TCP Connection(3)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:35:03 (RMI TCP Connection(3)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:35:03 (RMI TCP Connection(3)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:35:03 (RMI TCP Connection(3)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:35:03 (RMI TCP Connection(3)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:35:04 (RMI TCP Connection(3)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:35:09 (RMI TCP Connection(3)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:35:16 (RMI TCP Connection(3)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:35:35 (RMI TCP Connection(4)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:35:36 (RMI TCP Connection(4)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:35:37 (RMI TCP Connection(4)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:35:37 (RMI TCP Connection(4)-192.168.65.1) WARN  [DataNucleus.Query] - Query for candidates of easyBookingData.User and subclasses resulted in no possible candidates : La clase "easyBookingData.User" no tiene una tabla en la base de datos, pero esta operacion la necesita. Por favor compruebe el MetaData
+20-01-19_17:36:23 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.11) para el API "JDO" utilisando el JRE "{2}"
+20-01-19_17:36:23 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class" con definicion enhanced
+20-01-19_17:36:23 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class" con definicion enhanced
+20-01-19_17:36:23 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class" con definicion enhanced
+20-01-19_17:36:23 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SD\EasyBooking_Server\bin\easyBookingData\User.class" con definicion enhanced
+20-01-19_17:36:23 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases.
+20-01-19_17:36:23 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+20-01-19_17:36:23 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+20-01-19_17:36:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Airlines.jar
+20-01-19_17:36:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Authorization.jar
+20-01-19_17:36:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\Payment.jar
+20-01-19_17:36:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-api-jdo-5.1.9.jar
+20-01-19_17:36:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-cache-5.1.1.jar
+20-01-19_17:36:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-core-5.1.11.jar
+20-01-19_17:36:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\datanucleus-rdbms-5.1.11.jar
+20-01-19_17:36:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\javax.jdo-3.2.0-m8.jar
+20-01-19_17:36:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\log4j-1.2.14.jar
+20-01-19_17:36:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\lib\mysql-connector-java-8.0.12.jar
+20-01-19_17:36:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin
+20-01-19_17:36:23 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\resources
+20-01-19_17:36:25 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\AirlineService.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IAirlineService.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\IberiaGateway.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\airlines\VuelingGateway.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\AuthorizationService.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\FacebookGateway.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\GoogleGateway.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\authorization\IAuthorizationService.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\IUserDAO.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dao\UserDAO.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightAssembler.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\FlightDTO.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\dto\ReservationDTO.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Airport.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Flight.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\Reservation.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\easyBookingData\User.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\IPaymentService.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PayPalGateway.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\PaymentService.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\payment\VisaGateway.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\EasyBookingRemoteFacade.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\remote\IEasyBookingRemoteFacade.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SD\EasyBooking_Server\bin\server\EasyBookingServer.class
+20-01-19_17:36:25 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+20-01-19_17:36:34 (main) WARN  [DataNucleus.Datastore] - Default type for java type of java.math.BigInteger was previously jdbc-type=NUMERIC but this is not provided by the JDBC driver! Please report this to the DataNucleus developers
+20-01-19_17:36:34 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@2a693f59" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'egoitz.a.c@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:36:34 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@7de62196" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'test@test.es' for key 'PRIMARY'
+20-01-19_17:36:34 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@6ca18a14" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaroh@opendeusto.es' for key 'PRIMARY'
+20-01-19_17:36:34 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "easyBookingData.User@77659b30" con SQL "INSERT INTO `USER` (`AUTHORIZATION_SYS`,`CARDNUMBER`,`CVV`,`NAME`,`PASSWORD`,`PAYMENT_METHOD`,`USERNAME`,`EMAIL`) VALUES (?,?,?,?,?,?,?,?)" ha tirado un error : Duplicate entry 'alvaro@test.es' for key 'PRIMARY'

@@ -103,8 +103,7 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 		if(makePayment()) {
 			notifyAirline();
 			Reservation r = new Reservation(f.getDate(), f.getFlight_number(), f.getSeats());
-			currentAccount.makeReservation(r);
-			uDAO.updateUser(currentAccount);
+			uDAO.createRes(r);
 			return true;
 		}else {
 			System.out.println("Payment could not be done!");

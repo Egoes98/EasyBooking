@@ -9,4 +9,5 @@ public interface IUserDAO {
 	public User getUser(String email);
 	public void createUser(User u);
 	public void updateUser(User u);
+	public void createRes(Reservation r);
 }

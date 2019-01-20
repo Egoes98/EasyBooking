@@ -33,7 +33,7 @@ public class UserDAO implements IUserDAO{
 			System.out.println(" * Querying a User: " + email);
 			
 			tx.begin();
-			Query<?> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE name== '" + email + "'");
+			Query<?> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE email== '" + email + "'");
 			query.setUnique(true);
 			user = (User)query.execute();
 			tx.commit();
@@ -46,7 +46,7 @@ public class UserDAO implements IUserDAO{
 			pm.close();
 		}
 		
-		return null;
+		return user;
 	}
 
 	@Override
@@ -92,4 +92,10 @@ public class UserDAO implements IUserDAO{
                pm.close();
          }
     }
+
+	@Override
+	public void createRes(Reservation r) {
+		// TODO Auto-generated method stub
+		this.storeObject(r);
+	}
 }
