@@ -60,7 +60,8 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 		payment[1] = "Egoitz";
 		payment[2] = "12345";
 		uDAO.createUser(new User("test@test.es", "Facebook", payment));
-		currentAccount = new User("test@test.es", "Facebook", payment);
+		//For testing when database not working
+		//currentAccount = new User("test@test.es", "Facebook", payment);
 		//Google Test Accounts
 		
 		payment[0] = "Visa";
@@ -113,7 +114,8 @@ public class EasyBookingRemoteFacade extends UnicastRemoteObject implements IEas
 
 	@Override
 	public boolean loginUser(String email,String password) throws RemoteException {
-		//currentAccount = uDAO.getUser(email);
+		//For testing when database not working comment the next code
+		currentAccount = uDAO.getUser(email);
 		if(currentAccount == null) {
 			return false;
 		}
